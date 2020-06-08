@@ -10,3 +10,19 @@ logic layer by keeping them in two separates `.ts` and `.html` files.
 Webpack
 
 ### Presentation Components vs Smart Components
+
+### Structural Directives
+Such as `*ngFor`, allows us to change the DOM of our page based on the
+mapping of certain data into it.
+
+* `*ngFor` syntax:  
+```
+*ngFor="
+    let item of items;
+    let index as i;
+    let first as isFirst;
+    let last as isLast;
+    let even as isEven;
+    let odd as isOdd;
+"
+```
