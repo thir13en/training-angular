@@ -26,3 +26,9 @@ mapping of certain data into it.
     let odd as isOdd;
 "
 ```
+
+* `*ngIf` syntax:
+The directive is responsive to turn the expression into a boolean.  
+```
+*ngIf="expression"
+```
