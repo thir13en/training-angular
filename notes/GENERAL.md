@@ -46,3 +46,5 @@ A configuration object with class-key / boolean pairs.
 ```html
 <component-name [ngClass]="{ class1: applyBoolean, class2: true }"></component-name>
 ```
+* `ngClass` syntax:  
+<component-name [ngStyle]="{ textDecoration: 'underline' }"></component-name>
