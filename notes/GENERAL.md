@@ -32,3 +32,17 @@ The directive is responsive to turn the expression into a boolean.
 ```
 *ngIf="expression"
 ```
+
+* `ngClass` syntax:  
+You can pass a string, the class will be applied immediately.
+```html
+<component-name ngClass="class1 class2"></component-name>
+```
+Also an array of strings with the classes to append.
+```html
+<component-name [ngClass]="['class1', 'class2']"></component-name>
+```
+A configuration object with class-key / boolean pairs.
+```html
+<component-name [ngClass]="{ class1: applyBoolean, class2: true }"></component-name>
+```
