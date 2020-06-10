@@ -16,7 +16,7 @@ Such as `*ngFor`, allows us to change the DOM of our page based on the
 mapping of certain data into it.
 
 * `*ngFor` syntax:  
-```
+```angular2html
 *ngFor="
     let item of items;
     let index as i;
@@ -29,22 +29,39 @@ mapping of certain data into it.
 
 * `*ngIf` syntax:
 The directive is responsive to turn the expression into a boolean.  
-```
+```angular2html
 *ngIf="expression"
 ```
 
 * `ngClass` syntax:  
 You can pass a string, the class will be applied immediately.
-```html
+```angular2html
 <component-name ngClass="class1 class2"></component-name>
 ```
 Also an array of strings with the classes to append.
-```html
+```angular2html
 <component-name [ngClass]="['class1', 'class2']"></component-name>
 ```
 A configuration object with class-key / boolean pairs.
-```html
+```angular2html
 <component-name [ngClass]="{ class1: applyBoolean, class2: true }"></component-name>
 ```
-* `ngClass` syntax:  
+* `ngClass` syntax:
+```angular2html
 <component-name [ngStyle]="{ textDecoration: 'underline' }"></component-name>
+```  
+
+* `ngSwitch` syntax:  
+```angular2html
+<div [ngSwitch]="'expression'">
+    <div *ngSwitchCase="'val1'">
+        <h5>Whatever</h5>
+    </div>
+    <div *ngSwitchCase="'val2'">
+        <h5>Whatever</h5>
+    </div>
+    <div *ngSwitchDefault>
+        <h5>No match</h5>
+    </div>
+</div>
+```  
