@@ -11,8 +11,8 @@ export class ExampleService {
 
   getWhatever() {
     const params = new HttpParams()
-      .set('page', 1)
-      .set('pageSize', 10)
+      .set('page', '1')
+      .set('pageSize', '10')
 
     return this.http.get('/whatever/', { params });
   }

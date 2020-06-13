@@ -10,8 +10,17 @@ ng serve --proxy-config proxy.conf.json
 # How to add parameters to a GET request
 ```javascript
 const params = new HttpParams()
-    .set('page', 1)
-    .set('pageSize', 10)
+    .set('page', '1')
+    .set('pageSize', '10')
 
 this.http.get('/url', { params });
+```
+
+# How to add parameters to a PUT request
+```javascript
+const body = 'whatever';
+const headers = new HttpHeaders()
+    .set('X-Auth', 'userToken')
+
+this.http.put('/url', body, { headers });
 ```
