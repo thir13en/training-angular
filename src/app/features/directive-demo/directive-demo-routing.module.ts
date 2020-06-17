@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HDemoContainerComponent } from './components/h-demo-container/h-demo-container.component';
+import { DirectiveExamplesComponent } from './components/directive-examples/directive-examples.component';
 
 
 const routes: Routes = [
-  { path: '', component: HDemoContainerComponent },
+  { path: '', component: DirectiveExamplesComponent },
 ];
 
 @NgModule({

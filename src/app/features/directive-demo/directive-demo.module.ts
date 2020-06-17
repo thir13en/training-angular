@@ -2,15 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DirectiveDemoRoutingModule } from './directive-demo-routing.module';
-import { HighlightDemoComponent } from './components/highlight-demo/highlight-demo.component';
-import { HDemoContainerComponent } from './components/h-demo-container/h-demo-container.component';
+import { HighlightDirective } from '../../directives/highlight.directive';
+import { DirectiveExamplesComponent } from './components/directive-examples/directive-examples.component';
 
 
 @NgModule({
-  declarations: [HighlightDemoComponent, HDemoContainerComponent],
   imports: [
     CommonModule,
-    DirectiveDemoRoutingModule
-  ]
+    DirectiveDemoRoutingModule,
+  ],
+  declarations: [
+    DirectiveExamplesComponent,
+    HighlightDirective,
+  ],
 })
 export class DirectiveDemoModule { }
