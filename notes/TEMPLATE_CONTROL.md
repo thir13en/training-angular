@@ -18,3 +18,21 @@ Also you can outlet your templates.
 <div *ngTemplateOutlet="refName; context: {name: anotherProperty}">
 </div>
 ```
+Furthermore, you can pass template references as inputs to other components
+```angular2html
+<ng-template #templateRef></ng-template>
+<app-my-component [templateInput]="templateRef"></app-my-component>
+```
+In the component controller
+```javascript
+export class MyComponent {
+    @Input()
+    template: TemplateRef<any>;
+}
+```
+In the component template
+```angular2html
+<ng-template #ref>
+    <ng-container *ngTemplateOutlet="template; context: {key: propOrValue}"></ng-container>
+</ng-template>
+```
