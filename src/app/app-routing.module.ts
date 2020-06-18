@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./features/directive-demo/directive-demo.module').then(m => m.DirectiveDemoModule),
+    loadChildren: () => import('./features/directives-demo/directives-demo.module').then(m => m.DirectivesDemoModule),
   },
 ];
 

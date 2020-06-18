@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { DirectiveExamplesComponent } from './components/directive-examples/directive-examples.component';
+import { DirectivesExamplesComponent } from './components/directives-examples/directives-examples.component';
 
 
 const routes: Routes = [
-  { path: '', component: DirectiveExamplesComponent },
+  { path: '', component: DirectivesExamplesComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class DirectiveDemoRoutingModule { }
+export class DirectivesDemoRoutingModule { }
