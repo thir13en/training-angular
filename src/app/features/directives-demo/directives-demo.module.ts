@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DirectivesDemoRoutingModule } from './directives-demo-routing.module';
 import { HighlightDirective } from './directives/highlight.directive';
 import { DirectivesExamplesComponent } from './components/directives-examples/directives-examples.component';
+import { DirectivesDummyComponent } from './components/directives-dummy/directives-dummy.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { DirectivesExamplesComponent } from './components/directives-examples/di
   declarations: [
     DirectivesExamplesComponent,
     HighlightDirective,
+    DirectivesDummyComponent,
   ],
 })
 export class DirectivesDemoModule { }
