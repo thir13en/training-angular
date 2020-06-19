@@ -4,4 +4,8 @@
 Components are directives with a template.
 
 ### Structural directives
-Produce changes in the DOM tree and 
+Produce changes in the DOM tree. They create under the hood a ng-template with a conditional
+rendering logic. For instance `*ngIf="something as whatever"` is translated to:
+```angular2html
+<ng-template [ngIf]="something" let-whatever></ng-template>
+``` 
