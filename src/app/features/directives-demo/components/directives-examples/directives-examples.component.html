@@ -1,1 +1,6 @@
-<app-directives-dummy appHighlight></app-directives-dummy>
+<!-- we grabbed the reference of the directive and used it in this template -->
+<app-directives-dummy
+  #highlighter="hl"
+  [highlight]="false"
+  (click)="highlighter.toggle()"
+></app-directives-dummy>
