@@ -65,3 +65,8 @@ A configuration object with class-key / boolean pairs.
     </div>
 </div>
 ```  
+
+### ViewEncapsulation
+Is what makes components styles only accessible from within the component
+template. It is achieved by adding a custom property to the component 
+template elements, which acts as a scope identifier, so as to simulate a shadow dom. 
