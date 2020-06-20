@@ -4,3 +4,11 @@
   [highlight]="false"
   (click)="highlighter.toggle()"
 ></app-directives-dummy>
+
+
+<app-struc-directives-example *ngxUnless="false"></app-struc-directives-example>
+
+<!--this is what is happening under the hood -->
+<ng-template [ngxUnless]="false">
+  <app-struc-directives-example></app-struc-directives-example>
+</ng-template>
