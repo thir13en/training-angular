@@ -28,3 +28,21 @@ app-component-tag ::ng-deep .element-to-style {
 }
 ``` 
 This is a great way to bypass the Angular View Encapsulation mechanism.
+
+### Applying theming styles specifically within a component context
+Some times we want our component to be styled in a certain way depending on the context
+classes, we could do so in the following way:
+```scss
+::ng-deep .external-theme-class .internal styled element {
+  // in this case the ::ng-deep at the beginning removes all specificity
+  // on the selector, so it works but is a but overkill and we loose some 
+  // specificity
+}
+```
+To solve the lack of specificity, we have this great modifier coming to the rescue:
+```scss
+:host-context(.external-theme-class) .internal styled element {
+  // now it is only the outer theme class the one being freed from the 
+  // Angular View Encapsulation shadow dom emulation. 
+}
+```
