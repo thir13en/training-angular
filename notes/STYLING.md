@@ -46,3 +46,22 @@ To solve the lack of specificity, we have this great modifier coming to the resc
   // Angular View Encapsulation shadow dom emulation. 
 }
 ```
+
+### Angular View Encapsulation methods
+We can select different ways for Angular to manage the View Encapsulation in the
+component decorator:
+```angular2
+@Component({
+    ...
+    // default
+    encapsulation: ViewEncapsulation.Emulated
+    // Plain CSS, no encapsulation at all
+    encapsulation: ViewEncapsulation.None
+    // Deprecated, not to use
+    encapsulation: ViewEncapsulation.Native
+    // Using the browser APIs, careful with cross-browser compatibility
+    // this is to be used in the future when Shadow DOM is a fully
+    // implemented standard
+    encapsulation: ViewEncapsulation.ShadowDom
+})
+```
