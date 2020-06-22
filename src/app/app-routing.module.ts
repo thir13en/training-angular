@@ -7,6 +7,10 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./features/directives-demo/directives-demo.module').then(m => m.DirectivesDemoModule),
   },
+  {
+    path: 'di',
+    loadChildren: () => import('./features/dependency-injection-demo/dependency-injection-demo.module').then(m => m.DependencyInjectionDemoModule),
+  },
 ];
 
 @NgModule({
