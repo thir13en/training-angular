@@ -86,3 +86,10 @@ The local provider is ignored and we fetch the instance from the parent or modul
 @SkipSelf()
 private injectable: InjectableClassName
 ```
+
+### @Host decorator
+For a directive, uses the instance used by the component to which the decorator is applied
+```angular2
+@Host()
+private injectable: InjectableClassName
+```
