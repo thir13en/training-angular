@@ -59,3 +59,6 @@ So now if our service isn't injected in any part of the app, it won't
 be loaded in the production bundle (`tree shaking`).
 
 We should always use the `tree shakeable syntax` (`providedIn`) when possible.
+
+### Providing app wide configuration
+Check the `config.ts` file of this repo.
