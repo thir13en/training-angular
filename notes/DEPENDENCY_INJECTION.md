@@ -62,3 +62,27 @@ We should always use the `tree shakeable syntax` (`providedIn`) when possible.
 
 ### Providing app wide configuration
 Check the `config.ts` file of this repo.
+
+### @Optional decorator
+When added to an injected dependency in the constructor, avoids that
+the app crashes then the injectable is not provider at the root level or in the
+module providers array or in the component providers array.
+```angular2
+@Optional()
+private injectable: InjectableClassName
+```
+
+### @Self decorator
+Even thou there is a module level instance of a service, the @self decorator makes
+sure that we get a different instance of the service on the injected component.
+```angular2
+@Self()
+private injectable: InjectableClassName
+```
+
+### @SkipSelf decorator
+The local provider is ignored and we fetch the instance from the parent or module component.
+```angular2
+@SkipSelf()
+private injectable: InjectableClassName
+```
