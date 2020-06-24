@@ -25,4 +25,35 @@ it gets attached to the lifecycle of the component, so when the component is des
 so is the service and the memory space it is taking.
 
 ### Tree Shakeable providers
+Are services that can be tree shaken in case they are not used.
+```angular2
+@Injectable({
+    providedIn: 'root',
+    useFactory: (http: HttpClient) => new CoursesService(http),
+    deps: [HttpClient],
+})
+ServiceName {
 
+}
+```
+Which can be expressed as
+```angular2
+@Injectable({
+    providedIn: 'root',
+    useClass: ServiceName,
+})
+ServiceName {
+
+}
+```
+Which can be expressed as
+```angular2
+@Injectable({
+    providedIn: 'root'
+})
+ServiceName {
+
+}
+```
+So now if our service isn't injected in any part of the app, it won't
+be loaded in the production bundle (`tree shaking`).
