@@ -21,4 +21,11 @@ recognize that there is a change and updates the view accordingly.
 With Default change detection we check all the expressions in all the component tree
 every time there is a change in one place, whereas with OnPush we can manage with
 more granularity when will this take place. Also, OnPush does not check for mutations within
-the objects that are passed, only new assignation to them, enforcing immutability. 
+the objects that are passed, only new assignation to them, enforcing immutability.
+
+### OnPush and Observables
+`OnPush` Change Detection will look at the observable streams via `async` pipe,
+in this case it is a highly performant and recommendable use case.
+It is different thou with `subscribe and assign` method, because OnPush is quite dumb
+when it comes to detect changes through assignations happening at the level of the
+controller. 
