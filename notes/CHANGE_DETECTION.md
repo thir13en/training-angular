@@ -28,4 +28,31 @@ the objects that are passed, only new assignation to them, enforcing immutabilit
 in this case it is a highly performant and recommendable use case.
 It is different thou with `subscribe and assign` method, because OnPush is quite dumb
 when it comes to detect changes through assignations happening at the level of the
-controller. 
+controller.
+
+### A little optimization, the `@Attribute` decorator
+When a component receives a property that we know will not change, for instance:
+```angular2html
+<component-name fixedAttribute="value"></component-name>
+```
+In the component
+```angular2
+@Component({
+
+})
+export class ComponentName {
+    constructor(@Attribute('fixedAttribute') public arbitraryName: Type) {}
+}
+...
+```
+We can call this `one time binding`.
+
+### Custom managing of change detection via the `ChangeDetectionRef`
+Every component in Angular has an instance of the change detection mechanism
+that we can inject via the constructor and use.
+You can override the components OnPush ch detection with the method.
+```angular2
+private cd: ChangeDetectorRef,
+....
+this.cd.markForCheck()
+```
