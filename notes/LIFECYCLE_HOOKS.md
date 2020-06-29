@@ -32,6 +32,8 @@ This LCH is related to projected content in our component, if we try to mutate t
 we will get an error `ContentChangedAfterItHasBeenCheckedError`.
 
 ### AfterViewChecked
+It's the last lifecycle hook that runs on component change detection cycle. Runs after
+`AfterContentChecked`. It is called really often so should contain lightweight code.
 
 ### DoCheck
 Is going to get called every time Angular runs a change detection cycle in a given
