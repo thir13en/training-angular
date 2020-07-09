@@ -7,7 +7,7 @@ repository and start the server with
 ng serve --proxy-config proxy.conf.json
 ```
 
-# How to add parameters to a GET request
+### How to add parameters to a GET request
 ```javascript
 const params = new HttpParams()
     .set('page', '1')
@@ -16,11 +16,17 @@ const params = new HttpParams()
 this.http.get('/url', { params });
 ```
 
-# How to add parameters to a PUT request
+### How to add parameters to a PUT request
 ```javascript
 const body = 'whatever';
 const headers = new HttpHeaders()
     .set('X-Auth', 'userToken')
 
 this.http.put('/url', body, { headers });
+```
+
+### How to cache get, post... requests?
+With the `cache()` method.
+```javascript
+this.http.get('/url').cache();
 ```
