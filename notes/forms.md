@@ -8,3 +8,11 @@ binding:
 ```angular2html
 ìnput name="inputName" [(ngModel)]="bindedProp"
 ```
+
+### Form state classes
+We have three managed states reflected in form input classes:
+```text
+.ng-pristine -> .ng-dirty
+.ng-untouched -> .ng-touched
+.ng-invalid -> .ng-valid
+```
