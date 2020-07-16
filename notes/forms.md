@@ -8,6 +8,8 @@ binding:
 ```angular2html
 ìnput name="inputName" [(ngModel)]="bindedProp"
 ```
+`<form>` in template driven forms gets implicitly assigned an `ngForm` directive. If you look closely, you realize that a 
+TDF in Angular is managed by a set of implicit or explicit plain Angular directives contained in the `FormsModule`.
 
 ### Form state classes
 We have three managed states reflected in form input classes:
