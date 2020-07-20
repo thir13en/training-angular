@@ -27,3 +27,26 @@ We have three managed states reflected in form input classes:
 .ng-untouched -> .ng-touched
 .ng-invalid -> .ng-valid
 ```
+
+### Using ngModel to show errors to the user
+You can export ngModel to add error validation:
+```angular2html
+<div class="form-field">
+    <label>Title</label>
+    <input
+        #title="ngModel"
+        [(ngModel)]="whatever"
+        type="text"
+        name="title"
+        required
+        minlength="5"
+        maxlength="15"
+    >
+</div>
+<div class="field-error-message" *ngIf="title?.dirty && title?.errors?.required">
+    Field is mandatory
+</div>
+<div class="field-error-message" *ngIf="title?.dirty && title?.errors?.minlength">
+    min length is 5 characters
+</div>
+```
