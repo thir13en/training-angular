@@ -50,3 +50,13 @@ You can export ngModel to add error validation:
     min length is 5 characters
 </div>
 ```
+
+### Mark whole sections of the form as errored
+You can do so with the `ngModelGroup`, like so:
+```angular2html
+<!-- Do we really need to do this two things? looks to me like the second one is perfectly valid -->
+<fieldset ngModelGroup="mySectionName" #mySectionName="ngModelGroup">
+    <legend [ngClass]="{ error: !mySectionName.valid && !mySectionName.pristine }"></legend>
+    <!-- Whatever inputs we have here, if one of them is errored, the section will reflect it -->
+</fieldset>
+```
