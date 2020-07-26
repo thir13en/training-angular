@@ -60,3 +60,18 @@ You can do so with the `ngModelGroup`, like so:
     <!-- Whatever inputs we have here, if one of them is errored, the section will reflect it -->
 </fieldset>
 ```
+
+### Reactive Forms
+We basically need:
+1. A `FormGroup` that holds the whole form and it's state
+1. A set of `FormControls`
+As a support directives, we have the `formGroup` and the `formControlName` ones.  
+Here you are an example of the set up of a `FromGroup` in the controller.
+```javascript
+this.myForm = new FormGroup({
+    title: new FormControl(''),
+    duration: new FormControl(null),
+    description: new FormControl(''),
+})
+```
+
