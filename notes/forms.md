@@ -69,7 +69,7 @@ As a support directives, we have the `formGroup` and the `formControlName` ones.
 Here you are an example of the set up of a `FromGroup` in the controller.
 ```javascript
 this.myForm = new FormGroup({
-    title: new FormControl(''),
+    title: new FormControl('', [Validators.required]),
     duration: new FormControl(null),
     description: new FormControl(''),
 })

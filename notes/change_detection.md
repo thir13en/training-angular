@@ -56,3 +56,11 @@ private cd: ChangeDetectorRef,
 ....
 this.cd.markForCheck()
 ```
+
+### When is a Change Detection `tick` triggered?
+* After a DOM event callback
+* After an AJAX callback
+* After a `setTimeout` callback
+* After a `setInterval` callback
+* After a Websocket callback
+* After an `alert` has been triggered
