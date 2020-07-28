@@ -75,3 +75,12 @@ this.myForm = new FormGroup({
 })
 ```
 
+### Using the `FormBuilder` to create forms
+```javascript
+this.myForm = fb.group({
+    title: ['', [Validators.required]],
+    duration: [null],
+    description: [''],
+})
+```
+
