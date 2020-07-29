@@ -84,3 +84,11 @@ this.myForm = fb.group({
 })
 ```
 
+### Why the name "Reactive Forms"?
+The `FormControl` and `FormGroup` classes expose an `Observable` API that 
+can be used for `Reactive Programming` practises.
+```javascript
+this.myForm.valueChanges.subscribe(stuffToHappen);
+```
+We have all the power of all the `RxJs` operators to process the values of the forms.
+
