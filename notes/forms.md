@@ -92,3 +92,17 @@ this.myForm.valueChanges.subscribe(stuffToHappen);
 ```
 We have all the power of all the `RxJs` operators to process the values of the forms.
 
+### Display error messages
+Follow this example blueprint
+```angular2html
+<form [formGroup]="form">
+    <div class="form-field">
+        <label for="example">Example</label>
+        <input type="text" formControlName="example" />
+        <div *ngIf="form.controls.example.errors?.required" class="form-field-error">
+            <p>Field is Required</p>
+        </div>
+    </div>
+</form>
+```
+
