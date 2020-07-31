@@ -106,3 +106,23 @@ Follow this example blueprint
 </form>
 ```
 
+### Initializing FormControls separately
+```angular2
+@Component({
+  ...  
+})
+export class ExampleComponent implements OnInit {
+    
+    private exampleControl = new FormControl(10, [Validators.required, Validators.pattern('[0-9]+')]);
+
+    constructor(private fb: FormBuilder) {}
+
+    ngOnInit(): void {
+        this.fb.create({
+            exampleControl: this.exampleControl,
+        })
+    }
+
+}
+```
+This allows for a more powerful configuration of the control being done outside the form builder, with less of a code bload on it.
