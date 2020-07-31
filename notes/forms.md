@@ -113,7 +113,7 @@ Follow this example blueprint
 })
 export class ExampleComponent implements OnInit {
     
-    private exampleControl = new FormControl(10, [Validators.required, Validators.pattern('[0-9]+')]);
+    exampleControl = new FormControl(10, [Validators.required, Validators.pattern('[0-9]+')]);
 
     constructor(private fb: FormBuilder) {}
 
@@ -125,4 +125,8 @@ export class ExampleComponent implements OnInit {
 
 }
 ```
-This allows for a more powerful configuration of the control being done outside the form builder, with less of a code bload on it.
+This allows for a more powerful configuration of the control being done outside the form builder, with less of a code bload on it.  
+Also, you can bind now the control created in the controller, straight to the `[formControl]` directive.
+```angular2html
+<input type="text" [formControl]="exampleControl">
+```
