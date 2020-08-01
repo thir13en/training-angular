@@ -18,3 +18,12 @@
 
 ### It is better to publish unbundled files
 Most applications consuming Angular libraries will probably have a frontend build based on some combination of gulp, Jspm, SystemJs or Webpack, its best if the consumer of the library itself does the bundling. This ensures that bundlers like webpack will give optimal results for the end user, and that they won't throw warnings.
+
+### Publishing a library to npm
+Once the library is built in the lib folder, it's time to distribute it. You probably have configured .gitignore to exclude the lib folder. But npm uses .gitignore by default, so the lib folder won't be published!  
+We need to start by creating an .npmignore file that says what should be ignored when publishing to npm:  
+```
+examples
+node_modules
+src 
+```

@@ -65,3 +65,17 @@ component decorator:
     encapsulation: ViewEncapsulation.ShadowDom
 })
 ```
+
+### How to override component CSS if needed
+we just need to add an attribute to the body of the page.
+```angular2html
+<body override>
+    <app></app>
+</body>
+```
+To override component styles, we can then do the following:
+```css
+[override] hello-world h1 {
+    color:red;
+}
+```
