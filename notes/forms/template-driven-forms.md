@@ -58,3 +58,32 @@ You can do so with the `ngModelGroup`, like so:
     <!-- Whatever inputs we have here, if one of them is errored, the section will reflect it -->
 </fieldset>
 ```
+
+### Custom validation in TDD
+We can do so with a `directive`.
+```typescript
+import { Directive } from '@angular/core';
+import { FormControl,NG_VALIDATORS, Validator } from '@angular/forms';
+
+export const MIN_LENGTH_VALIDATOR = {
+    provide: NG_VALIDATORS,
+    multi: true,
+    useExisting:fordwardRed(() => DurationValidator),
+}
+
+@Directive({
+    selector: '[duration][ngModel]',
+    prividers: [MIN_LENGTH_VALIDATOR],
+})
+export class DurationValidator implements Validator {
+    validate(control: FormControl): {[key: string]: any} {
+        return validateDuration(c)
+    }
+}
+```
+The `DurationValidator` is not available to the dependency injection system at the moment 
+of bootstrapping, so we can solve that with the `fordwardRef` function, that basically
+tells the DI system that the reference is still not available, so it should be executed
+in a callback at the moment of bootstrapping the app, the return value of the callback shall
+be the element that we know will be available at that moment, so the Angular DI, registers
+it in the convenient time.
