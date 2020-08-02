@@ -30,3 +30,15 @@ With the `cache()` method.
 ```javascript
 this.http.get('/url').cache();
 ```
+
+### Avoid an http to trigger multiple times on multiple subscriptions
+```javascript
+this.lessons$ = this.lessonsService.loadLessons.pipe(
+    publishLast(),
+    refCount(),
+);
+this.lessons$.subscribe(
+    () => console.log('lessons loaded'),
+    console.error
+);
+```
