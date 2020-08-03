@@ -104,3 +104,34 @@ export function validateDuration(ctrl: FromControl) {
 
 }
 ```
+
+### Apply a partial update with `patchValue`
+```typescript
+partialUpdate(): void {
+    this.myForm.patchValue({
+        title: 'Set form values',
+        duration: 5,
+    });
+}
+```
+Notice that there is no need to set ALL the forms of the field, only those specified will be updated
+
+### Apply an update with `setValue`
+```typescript
+partialUpdate(): void {
+    this.myForm.setValue({
+        title: 'Set form values',
+        description: 'Set form values',
+        duration: 5,
+    });
+}
+```
+Now you need to set all the fields of the form for the method `setValue` to work.
+
+### Reset a form
+```typescript
+resetForm(): void {
+    this.myForm.reset();
+}
+```
+Resets a form, and the state associated to it, all css classes and so on.
