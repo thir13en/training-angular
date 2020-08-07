@@ -87,3 +87,24 @@ tells the DI system that the reference is still not available, so it should be e
 in a callback at the moment of bootstrapping the app, the return value of the callback shall
 be the element that we know will be available at that moment, so the Angular DI, registers
 it in the convenient time.
+
+### ngFormModel directive
+```angular2html
+<form [ngFormModel]="form" (ngSubmit)="onSubmit()">
+   <p>
+        <label>First Name:</label>
+        <input type="text" ngControl="firstName">
+   </p>
+</form>
+```
+The use of `NgFormModel` allows binding the form to a variable of type `ControlGroup` in the component controller.
+There we can use that variable to access the form observable via `form.valueChanges`.
+```typescript
+this.form.valueChanges
+        .map((value) => {
+            value.firstName = value.firstName.toUpperCase();
+            return value;
+        })
+        .filter((value) => this.form.valid)
+        .subscribe(validValue => ...);
+```
