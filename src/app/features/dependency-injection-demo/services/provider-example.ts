@@ -9,4 +9,4 @@ export function exampleServiceProvider(http: HttpClient) {
 }
 
 // the unique identifier of the dependency
-export const EXAMPLE_SERVICE = new InjectionToken<ExampleService>('EXAMPLE_SERVICE')
+export const EXAMPLE_SERVICE = new InjectionToken<ExampleService>('EXAMPLE_SERVICE');

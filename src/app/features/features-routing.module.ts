@@ -6,7 +6,7 @@ import { TemplateDrivenFormPasswordValidationComponent } from './template-driven
 const FEATURES_ROUTES: Routes = [
   {
     path: '',
-    component: TemplateDrivenFormPasswordValidationComponent
+    component: TemplateDrivenFormPasswordValidationComponent,
   },
 ];
 

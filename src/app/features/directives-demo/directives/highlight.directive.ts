@@ -2,11 +2,11 @@ import { Directive, EventEmitter, HostBinding, HostListener, Input, Output } fro
 
 
 @Directive({
-  selector: '[highlight]',
+  selector: '[appHighlight]',
   exportAs: 'hl',
 })
 export class HighlightDirective {
-  @Input('highlight')
+  @Input('appHighlight')
   private isHighlighted = false;
 
   // directives can also emit events

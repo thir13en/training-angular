@@ -14,7 +14,8 @@ const routes: Routes = [
   },
   {
     path: 'ng-di',
-    loadChildren: () => import('./features/dependency-injection-demo/dependency-injection-demo.module').then(m => m.DependencyInjectionDemoModule),
+    loadChildren: () => import('./features/dependency-injection-demo/dependency-injection-demo.module')
+                          .then(m => m.DependencyInjectionDemoModule),
   },
 ];
 

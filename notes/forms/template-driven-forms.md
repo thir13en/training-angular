@@ -99,7 +99,7 @@ it in the convenient time.
 ```
 The use of `NgFormModel` allows binding the form to a variable of type `ControlGroup` in the component controller.
 There we can use that variable to access the form observable via `form.valueChanges`.
-```typescript
+```javascript
 this.form.valueChanges
         .map((value) => {
             value.firstName = value.firstName.toUpperCase();
