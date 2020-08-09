@@ -1,10 +1,17 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "lib": [
+      "es2019",
+      "dom"
+    ],
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "module": "es2020",
+    "target": "es2016",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "strictPropertyInitialization": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
@@ -13,12 +20,9 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2015",
-    "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ]
+    "paths": {
+      "@testing/*": ["src/app/testing/*"]
+    }
   },
   "angularCompilerOptions": {
     "strictInjectionParameters": true,
