@@ -21,6 +21,7 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "paths": {
+      "@services/*": ["src/app/services/*"],
       "@testing/*": ["src/app/testing/*"]
     }
   },
