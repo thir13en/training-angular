@@ -1,7 +1,7 @@
 // A custom provider for example service to practice dependency injection in Angular
+import { InjectionToken } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ExampleService } from './example.service';
-import { InjectionToken } from '@angular/core';
 
 
 export function exampleServiceProvider(http: HttpClient) {
