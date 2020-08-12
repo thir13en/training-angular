@@ -5,5 +5,18 @@
 * Some data can be **simultaneously edited** by both the user using the UI or events coming from the backend via server push
 * You have a **need for undo/redo** of at least part of the application state
 
-
+### Example on how to create a Redux-like app with RxJs
+* Application Actions -> An action is a message that defines what happened in the UI: A Todo was added, removed, toggled. To make this type safe lets create a class for each action:
+```typescript
+export class AddTodoAction {
+    constructor(public newTodo: Todo) {}
+}
+export class ToggleTodoAction {
+    constructor(public todo: Todo) {}
+}
+```
+And then lets define a Typescript union type that is a union of all the action types.
+```typescript
+export type Action = LoadTodosAction | AddTodoAction | ToggleTodoAction | DeleteTodoAction | StartBackendAction | EndBackendAction;
+```
 

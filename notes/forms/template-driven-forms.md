@@ -12,7 +12,7 @@ TDF in Angular is managed by a set of implicit or explicit plain Angular directi
 ### How to export form directive?
 By assigning a template variable to it.
 ```angular2html
-<form #f="ngForm">
+<form #f="ngForm" autocomplete="off" novalidate>
     ...
 </form>
 ```
@@ -90,7 +90,7 @@ it in the convenient time.
 
 ### ngFormModel directive
 ```angular2html
-<form [ngFormModel]="form" (ngSubmit)="onSubmit()">
+<form [ngFormModel]="form" (ngSubmit)="onSubmit()" autocomplete="off" novalidate>
    <p>
         <label>First Name:</label>
         <input type="text" ngControl="firstName">
