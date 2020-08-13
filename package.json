@@ -4,11 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:proxy": "ng serve --proxy-config proxy.conf.json",
+    "install:fresh": "rm -rf node_modules npm-shrinkwrap.json && npm install && npm shrinkwrap && ng serve",
     "build": "ng build",
     "build:prod": "ng build --prod",
     "test": "ng test",
-    "lint": "ng lint format=stylish",
-    "check": "ng build && ng build --prod && ng lint && ng test",
+    "lint": "ng lint --format=stylish",
+    "lint:fix": "ng lint --fix",
+    "check": "ng build && ng build --prod && ng lint && npm t",
     "e2e": "ng e2e"
   },
   "private": true,

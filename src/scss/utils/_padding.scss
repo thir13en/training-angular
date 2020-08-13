@@ -1,0 +1,40 @@
+@mixin p($key: '') {
+  // set direction using key parameter
+  $direction: '';
+  @if($key == 't') {
+    $direction: '-top';
+  } @else if($key == 'r') {
+    $direction: '-right';
+  } @else if($key == 'b') {
+    $direction: '-bottom';
+  } @else if($key == 'l') {
+    $direction: '-left';
+  }
+  // loop to set incremental paddings
+  $i: 1;
+  $sizeInc: 4;
+  $size: .0625;
+  $sizeCodes: ('xs', 'sm', 'md', 'l', 'xl');
+  @each $sizeCode in $sizeCodes {
+    @while $i < $sizeInc {
+      .p#{$key}-#{$sizeCode}#{$i} {
+        padding#{$direction}: #{$size * $i}rem !important;
+      }
+      $i: $i + 1;
+    }
+    $size: $size * $sizeInc;
+    $i: 1;
+  }
+  @while $i < $sizeInc {
+    .p#{$key}-none {
+      padding#{$direction}: 0 !important;
+    }
+    $i: $i + 1;
+  }
+}
+
+@include p();
+@include p(t);
+@include p(r);
+@include p(b);
+@include p(l);

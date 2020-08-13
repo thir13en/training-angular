@@ -1,0 +1,6 @@
+@import "../components/loader";
+
+// create wrapper mixin for our components
+@mixin custom-components($theme) {
+  @include three-bouncing-dots-loader($theme);
+}

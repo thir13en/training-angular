@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
 
 
 @Component({
@@ -37,4 +37,6 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   `],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TemplateDrivenFormPasswordValidationComponent {}
+export class TemplateDrivenFormPasswordValidationComponent {
+  @HostBinding('class') classList = 'd-flex';
+}
