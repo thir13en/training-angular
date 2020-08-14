@@ -35,3 +35,17 @@ onAction(payload: PayloadType) {
     // ...
 }
 ```
+
+### Defining the application state
+```typescript
+export interface ApplicationState {
+    whatever: WhateverStateType,
+    uiState: UiState
+}
+```
+Taking a closer look at the uiState...
+```typescript
+export class UiState {
+    constructor(public actionOngoing: boolean, public message: string) {}
+}
+```
