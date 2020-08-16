@@ -93,3 +93,17 @@ For a directive, uses the instance used by the component to which the decorator 
 @Host()
 private injectable: InjectableClassName
 ```
+
+### We can create InjectionTokens manually
+Via the `InjectionToken` class.
+```typescript
+export const EXAMPLE_INJECTABLE = new InjectionToken<any>(
+  'Example',
+  {
+    providedIn: 'root',
+    factory: () => EXAMPLE_CONSTANT
+  },
+);
+```
+
+### TODO: research the difference between InjectionToken and OpaqueToken
