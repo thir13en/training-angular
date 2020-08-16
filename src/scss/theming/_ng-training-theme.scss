@@ -11,6 +11,8 @@
 ------------------------------------------------------------------------------------------------------------------  */
 $light-primary: mat-palette($ng-training-primary);
 $light-accent:  mat-palette($ng-training-accent);
+$light:  mat-palette($ng-training-light);
+$dark:  mat-palette($ng-training-dark);
 $light-theme:   mat-light-theme($light-primary, $light-accent);
 
 // Include the default theme styles.
@@ -38,6 +40,16 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 -------------  CUSTOM CLASSES ----------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------  */
+.c-primary { color: mat-color($light-primary) !important; }
+.c-accent { color: mat-color($light-accent) !important; }
+.c-light { color: mat-color($light) !important; }
+.c-dark { color: mat-color($dark) !important; }
+
+.bg-primary { background-color: mat-color($light-primary) !important; }
+.bg-accent { background-color: mat-color($light-accent) !important; }
+.bg-light { background-color: mat-color($light) !important; }
+.bg-dark { background-color: mat-color($dark) !important; }
+
 .themed-shadow-8 {
   @include mat-elevation(8, mat-color($light-primary), 1);
 }
