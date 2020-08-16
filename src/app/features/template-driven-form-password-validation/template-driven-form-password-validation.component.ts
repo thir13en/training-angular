@@ -8,7 +8,7 @@ import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
       <div>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name">
-        <p class="error-message c-accent">This field is mandatory</p>
+        <p class="error-message c-warn">This field is mandatory</p>
       </div>
 
       <div>
