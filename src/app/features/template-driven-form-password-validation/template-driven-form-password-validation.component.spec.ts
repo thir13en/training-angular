@@ -26,4 +26,11 @@ describe('TemplateDrivenFormPasswordValidationComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should have initially submit button disabled', () => {
+    fixture.detectChanges();
+    const buttonEl = fixture.nativeElement.querySelector('button[type="submit"]');
+    console.dir(buttonEl);
+    expect(buttonEl.disabled).toBeTrue();
+  });
+
 });

@@ -5,35 +5,33 @@ import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
   template: `
     <form #f="ngForm" autocomplete="off" novalidate>
 
-      <div>
+      <div class="d-flex justify-content-end">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name">
+        <input type="text" id="name" name="name" ngModel required>
         <p class="error-message c-warn">This field is mandatory</p>
       </div>
 
       <div>
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
-        <p class="error-message">This field is mandatory</p>
+        <input type="email" id="email" name="email" ngModel required>
+        <p class="error-message c-warn">This field is mandatory</p>
       </div>
 
       <div>
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
+        <input type="password" id="password" name="password" ngModel required>
       </div>
 
       <div>
         <label for="confirm">Confirm password:</label>
-        <input type="password" id="confirm" name="confirm">
+        <input type="password" id="confirm" name="confirm" ngModel required>
       </div>
 
-      <button type="submit">Sign up!</button>
+      <button type="submit" [disabled]="!f.touched || f.invalid">Sign up!{{f.invalid}}</button>
 
     </form>
   `,
-  styles: [`
-
-  `],
+  styles: [``],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TemplateDrivenFormPasswordValidationComponent {
