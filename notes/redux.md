@@ -49,3 +49,15 @@ export class UiState {
     constructor(public actionOngoing: boolean, public message: string) {}
 }
 ```
+
+### Avoiding event soup while using the dispatcher
+Although the dispatcher is a Subject, it's better to mark its type upon injection as an Observer only:
+```typescript
+constructor(@Inject(dispatcher) private dispatcher: Observer) {}
+```
+To emit an event:
+```typescript
+this.dispatcher.next(new ExampleAction(examplePayload));
+```
+We want to avoid most application code to accidentally subscribe directly to the dispatcher, instead of subscribing
+to the application state. 
