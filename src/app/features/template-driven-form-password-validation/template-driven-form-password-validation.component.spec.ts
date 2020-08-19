@@ -13,7 +13,7 @@ describe('TemplateDrivenFormPasswordValidationComponent', () => {
       imports: [TestingModule],
       declarations: [TemplateDrivenFormPasswordValidationComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -27,9 +27,7 @@ describe('TemplateDrivenFormPasswordValidationComponent', () => {
   });
 
   it('should have initially submit button disabled', () => {
-    fixture.detectChanges();
     const buttonEl = fixture.nativeElement.querySelector('button[type="submit"]');
-    console.dir(buttonEl);
     expect(buttonEl.disabled).toBeTrue();
   });
 

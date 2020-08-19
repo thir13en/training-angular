@@ -108,3 +108,23 @@ this.form.valueChanges
         .filter((value) => this.form.valid)
         .subscribe(validValue => ...);
 ```
+
+### Export the ngForm directive to create a template local reference
+You have to declare both the directive and the exported template reference.
+```angular2html
+  <div class="d-flex flex-column align-items-end mb-sm3">
+    <label for="password">Password:</label>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      ngModel
+      #password="ngModel"
+      required
+    >
+    <p
+      *ngIf="password.invalid && password.touched"
+      class="error-message c-warn"
+    >This field is mandatory</p>
+  </div>
+```
