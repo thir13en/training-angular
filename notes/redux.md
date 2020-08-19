@@ -61,3 +61,20 @@ this.dispatcher.next(new ExampleAction(examplePayload));
 ```
 We want to avoid most application code to accidentally subscribe directly to the dispatcher, instead of subscribing
 to the application state. 
+
+
+### Create the RxJs reducer
+We can use the `scan` operator, that acts as an `Observable` reducer but emits a value every time
+the reducer gets applied an operation, which is what we want because our reducer will never resolve,
+rather evolve in time.
+```typescript
+let appStateObservable = actions.pipe(
+    scan( (state: ApplicationState, action) => {
+        let newState: ApplicationState = {
+            todos: calculateTodos(state.todos, action),
+            uiState: calculateUiState(state.uiState, action)
+        };
+        return newState;
+    } , initialState),
+);
+```
