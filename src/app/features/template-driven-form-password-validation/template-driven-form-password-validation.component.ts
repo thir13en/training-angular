@@ -33,8 +33,9 @@ import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
           #email="ngModel"
           required
         >
+        <!-- Another way to validate with specific errors -->
         <p
-          *ngIf="email.invalid && email.touched"
+          *ngIf="email.errors?.required && email.touched"
           class="error-message c-warn"
         >This field is mandatory</p>
       </div>
