@@ -78,3 +78,7 @@ let appStateObservable = actions.pipe(
     } , initialState),
 );
 ```
+
+### How to avoid having multiple observable stream threads, one for every subscription?
+Since the content delivered by the Redux store shall always be the same, we should
+use the `share` RxJs operator to make the store subscription more performant.
