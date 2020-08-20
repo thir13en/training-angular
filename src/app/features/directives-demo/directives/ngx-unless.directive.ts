@@ -5,7 +5,6 @@ import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
   selector: '[appNgxUnless]'
 })
 export class NgxUnlessDirective {
-
   private visible = false;
 
   constructor(
@@ -15,7 +14,7 @@ export class NgxUnlessDirective {
   ) { }
 
   @Input()
-  set ngxUnless(condition: boolean) {
+  set appNgxUnless(condition: boolean) {
     if (!(condition || this.visible)) {
       this.viewContainerRef.createEmbeddedView(this.templateRef);
       this.visible = true;

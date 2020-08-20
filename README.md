@@ -1,4 +1,8 @@
-# AngularTraining
+# Angular Santiloopz Training
+
+This is a repository for keeping a register out of my lousy memory of the things I find handy to know in Angular.  
+You can find a [bunch of notes and drafts](notes/index.md) that are constantly updated with new things. As you can see,
+the notes are in `markdown`, please, feel free to participate in this repo and PR if you feel it is useful for you.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0-rc.0.
 

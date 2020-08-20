@@ -3,7 +3,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ExampleService {
 
