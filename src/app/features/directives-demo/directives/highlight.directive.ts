@@ -13,10 +13,6 @@ export class HighlightDirective {
   @Output()
   highlightChanged: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  constructor() {
-    console.log('works');
-  }
-
   // you need to apply a typescript getter method in order for this host binding to work
   // this adds always a classname highlighted
   // @HostBinding('className')
@@ -37,8 +33,6 @@ export class HighlightDirective {
 
   @HostListener('click', ['$event'])
   handleClick($event: MouseEvent) {
-    alert('click');
-    console.log($event);
     this.toggle();
   }
 

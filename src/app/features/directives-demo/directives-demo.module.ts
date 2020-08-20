@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DirectivesDemoRoutingModule } from './directives-demo-routing.module';
-import { HighlightDirective } from './directives/highlight.directive';
-import { DirectivesExamplesComponent } from './components/directives-examples/directives-examples.component';
 import { DirectivesDummyComponent } from './components/directives-dummy/directives-dummy.component';
-import { StrucDirectivesExampleComponent } from './components/struc-directives-example/struc-directives-example.component';
+import { DirectivesExamplesComponent } from './components/directives-examples/directives-examples.component';
+import { HighlightDirective } from './directives/highlight.directive';
 import { NgxUnlessDirective } from './directives/ngx-unless.directive';
+import { StrucDirectivesExampleComponent } from './components/struc-directives-example/struc-directives-example.component';
 
 
 @NgModule({
@@ -15,11 +15,11 @@ import { NgxUnlessDirective } from './directives/ngx-unless.directive';
     DirectivesDemoRoutingModule,
   ],
   declarations: [
-    DirectivesExamplesComponent,
     HighlightDirective,
+    NgxUnlessDirective,
+    DirectivesExamplesComponent,
     DirectivesDummyComponent,
     StrucDirectivesExampleComponent,
-    NgxUnlessDirective,
   ],
 })
 export class DirectivesDemoModule { }

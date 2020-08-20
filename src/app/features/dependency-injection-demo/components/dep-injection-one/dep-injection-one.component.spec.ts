@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { TestingModule } from '@testing/testing.module';
 import { DepInjectionOneComponent } from './dep-injection-one.component';
+
 
 describe('DepInjectionOneComponent', () => {
   let component: DepInjectionOneComponent;
@@ -8,7 +10,8 @@ describe('DepInjectionOneComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DepInjectionOneComponent ]
+      imports: [TestingModule],
+      declarations: [DepInjectionOneComponent],
     })
     .compileComponents();
   }));

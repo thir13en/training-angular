@@ -12,7 +12,7 @@ TDF in Angular is managed by a set of implicit or explicit plain Angular directi
 ### How to export form directive?
 By assigning a template variable to it.
 ```angular2html
-<form #f="ngForm">
+<form #f="ngForm" autocomplete="off" novalidate>
     ...
 </form>
 ```
@@ -90,7 +90,7 @@ it in the convenient time.
 
 ### ngFormModel directive
 ```angular2html
-<form [ngFormModel]="form" (ngSubmit)="onSubmit()">
+<form [ngFormModel]="form" (ngSubmit)="onSubmit()" autocomplete="off" novalidate>
    <p>
         <label>First Name:</label>
         <input type="text" ngControl="firstName">
@@ -107,4 +107,24 @@ this.form.valueChanges
         })
         .filter((value) => this.form.valid)
         .subscribe(validValue => ...);
+```
+
+### Export the ngForm directive to create a template local reference
+You have to declare both the directive and the exported template reference.
+```angular2html
+  <div class="d-flex flex-column align-items-end mb-sm3">
+    <label for="password">Password:</label>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      ngModel
+      #password="ngModel"
+      required
+    >
+    <p
+      *ngIf="password.invalid && password.touched"
+      class="error-message c-warn"
+    >This field is mandatory</p>
+  </div>
 ```
