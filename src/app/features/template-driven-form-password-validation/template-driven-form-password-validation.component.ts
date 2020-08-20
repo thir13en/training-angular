@@ -3,11 +3,11 @@ import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
 
 @Component({
   template: `
-    <h1>Password Validation example</h1>
+    <h1 class="mt-md3">Password Validation example</h1>
 
     <form #f="ngForm" autocomplete="off" novalidate>
 
-      <div class="d-flex flex-column align-items-end mb-sm3">
+      <div class="d-flex flex-column mb-sm3">
         <label for="name">Name:</label>
         <input
           type="text"
@@ -23,7 +23,7 @@ import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
         >This field is mandatory</p>
       </div>
 
-      <div class="d-flex flex-column align-items-end mb-sm3">
+      <div class="d-flex flex-column mb-sm3">
         <label for="email">Email:</label>
         <input
           type="email"
@@ -39,7 +39,7 @@ import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
         >This field is mandatory</p>
       </div>
 
-      <div class="d-flex flex-column align-items-end mb-sm3">
+      <div class="d-flex flex-column mb-sm3">
         <label for="password">Password:</label>
         <input
           type="password"
@@ -55,7 +55,7 @@ import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
         >This field is mandatory</p>
       </div>
 
-      <div class="d-flex flex-column align-items-end mb-sm3">
+      <div class="d-flex flex-column mb-sm3">
         <label for="confirm">Confirm password:</label>
         <input
           type="password"
@@ -72,7 +72,14 @@ import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
       </div>
 
       <div class="d-flex justify-content-end mb-sm3">
-        <button type="submit" [disabled]="!f.touched || f.invalid">Sign up!{{f.invalid}}</button>
+        <p
+          *ngIf="f.submitted && password.value !== confirm.value"
+          class="error-message c-warn"
+        >Please, make sure both passwords match</p>
+      </div>
+
+      <div class="mb-sm3">
+        <button type="submit" [disabled]="!f.touched || f.invalid">Sign up!</button>
       </div>
 
     </form>
