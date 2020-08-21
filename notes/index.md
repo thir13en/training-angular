@@ -7,5 +7,7 @@
 1. [Content Projection](content-projection.md)
 1. [Dependency Injection](dependency-injection.md)
 1. [Directives](directives.md)
+1. [End to End Testing](e2e.md)
+1. [Errors](errors.md)
 1. [Forms](forms/index.md)
 1. [Rendering](./rendering.md)
