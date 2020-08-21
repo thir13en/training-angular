@@ -70,3 +70,8 @@ A configuration object with class-key / boolean pairs.
 Is what makes components styles only accessible from within the component
 template. It is achieved by adding a custom property to the component 
 template elements, which acts as a scope identifier, so as to simulate a shadow dom. 
+
+### Angular build process
+The `ng` command reads your `angular.json` file to find which Builder should be used. The Builder layer is internally called `Architect`,
+so look in your `angular.json` for a key `architect`, and you'll see mappings for what builder to use. For example, say you run `ng build`;
+the default builder is `@angular-devkit/build-angular:browser`.
