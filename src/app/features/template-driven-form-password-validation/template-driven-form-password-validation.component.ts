@@ -85,7 +85,11 @@ import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
 
     </form>
   `,
-  styles: [``],
+  styles: [`
+    form {
+      border: 1px solid #333;
+    }
+  `],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TemplateDrivenFormPasswordValidationComponent {
