@@ -5,6 +5,7 @@
 1. [Change Detection](change-detection.md)
 1. [Components](components.md)
 1. [Content Projection](content-projection.md)
+1. [Debugging](debugging.md)
 1. [Dependency Injection](dependency-injection.md)
 1. [Directives](directives.md)
 1. [End to End Testing](e2e.md)
