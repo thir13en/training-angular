@@ -78,7 +78,40 @@ let appStateObservable = actions.pipe(
     } , initialState),
 );
 ```
-
 ### How to avoid having multiple observable stream threads, one for every subscription?
 Since the content delivered by the Redux store shall always be the same, we should
 use the `share` RxJs operator to make the store subscription more performant.
+
+### Example for bootstrapping the store
+```typescript
+export function applicationStateFactory(initialState: ApplicationState, actions: Observable): Observable {
+
+    let appStateObservable = actions.scan( (state: ApplicationState, action) => {
+
+        let newState: ApplicationState = {
+            todos: calculateTodos(state.todos, action),
+            uiState: calculateUiState(state.uiState, action)
+        };
+
+        return newState;
+
+    } , initialState).share();
+
+    return wrapIntoBehaviorSubject(initialState, appStateObservable);
+}
+
+import { provide } from "@angular/core";
+
+@NgModule({
+    imports: [BrowserModule],
+    bootstrap: [App],
+    providers: [
+        {
+            provide: state,
+            useFactory: applicationStateFactory,
+            deps: [new Inject(initialState), new Inject(dispatcher)]
+        }  
+    ],
+})
+export class AppModule {}
+```
