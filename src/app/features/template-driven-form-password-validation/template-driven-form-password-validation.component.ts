@@ -103,19 +103,7 @@ import { NgForm, NgModel } from '@angular/forms';
       />
     </div>
   `,
-  styles: [`
-    label {
-      margin-bottom: .3rem;
-    }
-    input {
-      border: 1px solid #8d949a;
-      background-color: #f2edf3;
-      border-radius: .17rem;
-      height: 1.7rem;
-      padding: 0 .6rem;
-      box-shadow: 0 0 .13rem #4e6d8e;
-    }
-  `],
+  styleUrls: ['./template-driven-form-password-validation.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TemplateDrivenFormPasswordValidationComponent {
