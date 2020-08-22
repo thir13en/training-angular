@@ -1788,9 +1788,9 @@
       }
     },
     "@types/jasmine": {
-      "version": "3.5.12",
-      "resolved": "https://registry.npmjs.org/@types/jasmine/-/jasmine-3.5.12.tgz",
-      "integrity": "sha512-vJaQ58oceFao+NzpKNqLOWwHPsqA7YEhKv+mOXvYU4/qh+BfVWIxaBtL0Ck5iCS67yOkNwGkDCrzepnzIWF+7g==",
+      "version": "3.5.13",
+      "resolved": "https://registry.npmjs.org/@types/jasmine/-/jasmine-3.5.13.tgz",
+      "integrity": "sha512-bVSrTEWdCNH2RHN+E0QlEr4pGPMRA6puKOmL/X13ZeZmUS0q12ZR1rkB9PVvJSX0zi/OXrMDNvUai+PC380+rQ==",
       "dev": true
     },
     "@types/jasminewd2": {
@@ -2166,9 +2166,9 @@
       }
     },
     "aggregate-error": {
-      "version": "3.0.1",
-      "resolved": "https://registry.npmjs.org/aggregate-error/-/aggregate-error-3.0.1.tgz",
-      "integrity": "sha512-quoaXsZ9/BLNae5yiNoUz+Nhkwz83GhWwtYFglcjEQB2NDHCIpApbqXxIFnm4Pq/Nvhrsq5sYJFyohrrxnTGAA==",
+      "version": "3.1.0",
+      "resolved": "https://registry.npmjs.org/aggregate-error/-/aggregate-error-3.1.0.tgz",
+      "integrity": "sha512-4I7Td01quW/RpocfNayFdFVk1qSuoh0E7JrbRJ16nH01HhKFQ88INq9Sd+nd72zqRySlr9BmDA8xlEJ6vJMrYA==",
       "dev": true,
       "requires": {
         "clean-stack": "^2.0.0",
@@ -4822,9 +4822,9 @@
       "dev": true
     },
     "eventemitter3": {
-      "version": "4.0.4",
-      "resolved": "https://registry.npmjs.org/eventemitter3/-/eventemitter3-4.0.4.tgz",
-      "integrity": "sha512-rlaVLnVxtxvoyLsQQFBx53YmXHDxRIzzTLbdfxqi4yocpSjAxXwkU0cScM5JgSKMqEhrZpnvQ2D9gjylR0AimQ==",
+      "version": "4.0.5",
+      "resolved": "https://registry.npmjs.org/eventemitter3/-/eventemitter3-4.0.5.tgz",
+      "integrity": "sha512-QR0rh0YiPuxuDQ6+T9GAO/xWTExXpxIes1Nl9RykNGTnE1HJmkuEfxJH9cubjIOQZ/GH4qNBR4u8VSHaKiWs4g==",
       "dev": true
     },
     "events": {
@@ -4994,9 +4994,9 @@
       },
       "dependencies": {
         "type": {
-          "version": "2.0.0",
-          "resolved": "https://registry.npmjs.org/type/-/type-2.0.0.tgz",
-          "integrity": "sha512-KBt58xCHry4Cejnc2ISQAF7QY+ORngsWfxezO68+12hKV6lQY8P/psIkcbjeHWn7MqcgciWJyCCevFMJdIXpow==",
+          "version": "2.1.0",
+          "resolved": "https://registry.npmjs.org/type/-/type-2.1.0.tgz",
+          "integrity": "sha512-G9absDWvhAWCV2gmF1zKud3OyC61nZDwWvBL2DApaVFogI07CprggiQAOOjvp2NRjYWFzPyu7vwtDrQFq8jeSA==",
           "dev": true
         }
       }
