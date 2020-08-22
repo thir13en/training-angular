@@ -46,12 +46,14 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 .c-warn { color: mat-color($light-warn) !important; }
 .c-light { color: mat-color($light) !important; }
 .c-dark { color: mat-color($dark) !important; }
+.c-white { color: #fff !important; }
 
 .bg-primary { background-color: mat-color($light-primary) !important; }
 .bg-accent { background-color: mat-color($light-accent) !important; }
 .bg-warn { background-color: mat-color($light-warn) !important; }
 .bg-light { background-color: mat-color($light) !important; }
 .bg-dark { background-color: mat-color($dark) !important; }
+.bg-white { background-color: #fff !important; }
 
 .themed-shadow-8 {
   @include mat-elevation(8, mat-color($light-primary), 1);
