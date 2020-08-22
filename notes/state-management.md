@@ -1,5 +1,6 @@
-# Redux
+# State Management
 
+## Redux-like
 ### You probably don't need Redux, here's when you will need it
 * Multiple parts of your app display differently the **same data**
 * Some data can be **simultaneously edited** by both the user using the UI or events coming from the backend via server push
@@ -123,3 +124,6 @@ Pure components can receive observables as input streams, but they should not ha
 If a pure component wants to dispatch an action, it instead issues an event via `EventEmitter`,
 and it's the smart component that will subscribe to the event emitter it and in response dispatch
 an action.
+
+
+## Observable Data Services

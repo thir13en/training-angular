@@ -17,6 +17,7 @@ const routes: Routes = [
     loadChildren: () => import('./features/dependency-injection-demo/dependency-injection-demo.module')
                           .then(m => m.DependencyInjectionDemoModule),
   },
+  // TODO: add 404 { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({

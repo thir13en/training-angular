@@ -14,4 +14,5 @@
 1. [Talented Dudes](relevant-folks.md)
 1. [Styling](styling.md)
 1. [Router](router.md)
+1. [State Management](state-management.md)
 1. [Rendering](rendering.md)
