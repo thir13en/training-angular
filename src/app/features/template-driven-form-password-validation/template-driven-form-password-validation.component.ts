@@ -1,11 +1,18 @@
-import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
+import { NgForm, NgModel } from '@angular/forms';
 
 
 @Component({
   template: `
-    <h1 class="mt-md3">Password Validation example</h1>
+    <h1 class="mat-headline m-md3 c-dark">Password Validation example</h1>
 
-    <form #f="ngForm" autocomplete="off" novalidate>
+    <form
+      #f="ngForm"
+      class="mb-md2 p-md1 pr-md2 pl-md2 bg-white rounded w-25 mat-elevation-z3"
+      autocomplete="off"
+      novalidate
+      (ngSubmit)="acceptMember(password, confirm)"
+    >
 
       <div class="d-flex flex-column mb-sm3">
         <label for="name">Name:</label>
@@ -79,19 +86,34 @@ import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
         >Please, make sure both passwords match</p>
       </div>
 
-      <div class="mb-sm3">
-        <button type="submit" [disabled]="!f.touched || f.invalid">Sign up!</button>
+      <div class="mb-sm3 d-flex justify-content-end">
+        <button
+          type="submit"
+          mat-button
+          color="primary"
+          [disabled]="!f.touched || f.invalid"
+        >Sign up!</button>
       </div>
 
     </form>
+    <div *ngIf="peterOpensDoor" class="d-flex justify-content-center">
+      <img
+        src="https://muywaso.com/wp-content/uploads/2018/12/aff275c30c0eafcf5fc1cd259f58384e-rimg-w640-h346-gmir.jpg"
+        alt="Yisus"
+      />
+    </div>
   `,
-  styles: [`
-    form {
-      border: 1px solid #333;
-    }
-  `],
+  styleUrls: ['./template-driven-form-password-validation.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TemplateDrivenFormPasswordValidationComponent {
   @HostBinding('class') classList = 'd-flex flex-column align-items-center w-100';
+  peterOpensDoor = false;
+
+  acceptMember(passphrase: NgModel, confirm: NgModel): void {
+    if (passphrase.value === confirm.value) {
+      this.peterOpensDoor = true;
+      alert('Welcome to heaven, pal!');
+    }
+  }
 }

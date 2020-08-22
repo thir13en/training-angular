@@ -1,5 +1,5 @@
 @import '~@angular/material/theming';
-@import 'theme-colors';
+@import 'color-palettes';
 @import "custom-components";
 
 @include mat-core();
@@ -41,18 +41,6 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 -------------  CUSTOM CLASSES ----------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------  */
-.c-primary { color: mat-color($light-primary) !important; }
-.c-accent { color: mat-color($light-accent) !important; }
-.c-warn { color: mat-color($light-warn) !important; }
-.c-light { color: mat-color($light) !important; }
-.c-dark { color: mat-color($dark) !important; }
-
-.bg-primary { background-color: mat-color($light-primary) !important; }
-.bg-accent { background-color: mat-color($light-accent) !important; }
-.bg-warn { background-color: mat-color($light-warn) !important; }
-.bg-light { background-color: mat-color($light) !important; }
-.bg-dark { background-color: mat-color($dark) !important; }
-
 .themed-shadow-8 {
   @include mat-elevation(8, mat-color($light-primary), 1);
 }
