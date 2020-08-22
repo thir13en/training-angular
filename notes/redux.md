@@ -115,3 +115,11 @@ import { provide } from "@angular/core";
 })
 export class AppModule {}
 ```
+
+### How should pure components use dispatcher and state?
+Pure components can receive observables as input streams, but they should not have the
+`dispatcher` or `state` observable injected into them, as this would bind them to this
+ particular application, making them not reusable.  
+If a pure component wants to dispatch an action, it instead issues an event via `EventEmitter`,
+and it's the smart component that will subscribe to the event emitter it and in response dispatch
+an action.
