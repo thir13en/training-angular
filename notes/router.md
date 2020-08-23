@@ -30,3 +30,17 @@ We use the `routerLinkActive` directive.
 ```
 The `routerLinkActiveOptions` can be set to only apply the class when the path gets and
 strict matching.
+
+### Use string interpolation with `navigateByUrl`
+```typescript
+navigate(id): void {
+    this.router.navigateByUrl(`/fragment/${id}`);
+}
+```
+
+### Navigate relative to current route
+```typescript
+navigate(id): void {
+    this.router.navigate(['fragment'], { relativeTo: this.route });
+}
+```
