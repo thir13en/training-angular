@@ -3,10 +3,10 @@
 
 ### routerLink
 The basic directive for navigation, can accept a string or an expression consisting of 
-an array of route fragments
+an array of route fragments. We can also assign query params, as shown in the example.
 ```angular2html
 <a routerLink="home">Home</a>
-<a [routerLink]="['home']">Home</a>
+<a [routerLink]="['home']" [queryParams]="{ key: 'value', }">Home</a>
 ```
 
 ### Set up a specific entry route for the app
@@ -44,3 +44,13 @@ navigate(id): void {
     this.router.navigate(['fragment'], { relativeTo: this.route });
 }
 ```
+
+### Pass query parameters
+```typescript
+navigate(id): void {
+    this.router.navigate(['fragment'], { queryParams: { key: 'value', } });
+}
+```
+
+### Get fragment and query params
+We have available the `paramMap` and the `queryParamMap` observable in our `ActivatedRoute`.
