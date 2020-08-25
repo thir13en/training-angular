@@ -2,6 +2,7 @@
 
 1. [Angular Elements](angular-elements.md)
 1. [Angular Material](angular-material.md)
+1. [Bootstrapping](bootstrapping.md)
 1. [Change Detection](change-detection.md)
 1. [Components](components.md)
 1. [Content Projection](content-projection.md)
@@ -10,6 +11,7 @@
 1. [Directives](directives.md)
 1. [End to End Testing](e2e.md)
 1. [Errors](errors.md)
+1. [General](general.md)
 1. [Forms](forms/index.md)
 1. [Pitfalls](pitfalls.md)
 1. [Router](router.md)
