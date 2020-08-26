@@ -45,6 +45,12 @@ navigate(id): void {
 }
 ```
 
+### Check route observers to avoid memory leaks
+```typescript
+// the number of current ongoing subscriptions
+this.route.(params | queryParams).observers.length
+```
+
 ### Pass query parameters
 ```typescript
 navigate(id): void {
