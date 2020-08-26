@@ -15,3 +15,4 @@ People that have a strong weight within the Angular Ecosystem.
 * Todd Motto
 * Uri Shaked
 * Netanel Basal
+* Joe Eames (NgConf)
