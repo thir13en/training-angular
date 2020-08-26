@@ -13,3 +13,5 @@ People that have a strong weight within the Angular Ecosystem.
 * Ben Lesh (RxJs)
 * [Juri Strumpflohner](https://juristr.com/)
 * Todd Motto
+* Uri Shaked
+* Netanel Basal
