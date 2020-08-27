@@ -60,3 +60,37 @@ navigate(id): void {
 
 ### Get fragment and query params
 We have available the `paramMap` and the `queryParamMap` observable in our `ActivatedRoute`.
+
+### canDeactivate
+`Guard` that is associated to a certain route and triggers an action when the user tries to leave.
+ In routes module:
+ ```typescript
+const routes = [ç
+    {
+        path: 'jupiter',
+        component: NoopComponent,
+        canDeactivate: NoopComponentDeactivate,
+    }
+];
+// in NoopComponent
+@Component({
+    ...
+    providers: [NoopComponentDeactivate],
+})
+NoopComponent {}
+
+import {ActivatedRouteSnapshot, CanDeactivate, canDeactivate,RouterStateSnapshot } from '@angular/router';
+
+export class NoopComponentDeactivate implements CanDeactivate<NoopComponent> {
+    canDeactivate(
+        component: NoopComponent,
+        route: ActivatedRouteSnapshot,
+        state: RouterStateSnapshot
+    ): Observable<boolean> | boolean {
+        if (!component.evaluationFlag) {
+            return true;
+        }
+        return confirm('Please don\'t go');
+    }
+}
+```

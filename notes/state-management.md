@@ -127,3 +127,4 @@ an action.
 
 
 ## Observable Data Services
+* Remember to always expose the `BehaviourSubject` `asObservable()`.
