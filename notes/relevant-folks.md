@@ -3,6 +3,8 @@
 People that have a strong weight within the Angular Ecosystem.
 
 * Igor Minar
+* Filipe Silva
+* Foxandxss
 * John Papa
 * Stephen Fluin
 * Minko Gechev
