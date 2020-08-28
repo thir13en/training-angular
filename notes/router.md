@@ -64,8 +64,8 @@ We have available the `paramMap` and the `queryParamMap` observable in our `Acti
 ### canDeactivate
 `Guard` that is associated to a certain route and triggers an action when the user tries to leave.
  In routes module:
- ```typescript
-const routes = [ç
+```typescript
+const routes = [
     {
         path: 'jupiter',
         component: NoopComponent,
@@ -91,6 +91,36 @@ export class NoopComponentDeactivate implements CanDeactivate<NoopComponent> {
             return true;
         }
         return confirm('Please don\'t go');
+    }
+}
+```
+
+### canActivate
+ ```typescript
+const routes = [
+    {
+        path: 'jupiter',
+        component: NoopComponent,
+        canActivate: NoopComponentActivate,
+    }
+];
+// in NoopComponent
+@NgModule({
+    ...
+    providers: [NoopComponentActivate],
+})
+NoopModule {}
+
+import { ActivatedRouteSnapshot, CanDeactivate, canDeactivate,RouterStateSnapshot } from '@angular/router';
+
+export class NoopComponentDeactivate implements CanActivate {
+    canDeactivate(
+        route: ActivatedRouteSnapshot,
+        state: RouterStateSnapshot
+    ): Observable<boolean> | boolean {
+        let canActivate = true;
+        // your business logic that returns bool or obs<bool>
+        return canActivate;
     }
 }
 ```
