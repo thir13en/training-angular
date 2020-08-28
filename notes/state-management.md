@@ -128,3 +128,14 @@ an action.
 
 ## Observable Data Services
 * Remember to always expose the `BehaviourSubject` `asObservable()`.
+
+### Avoid duplicate http calls in ODS
+This avoids duplicate http calls but beware callers won't be able to apply `retry` operations.
+```typescript
+storeTask(payload: Type): Observable<any> {
+    return this.http.post('/path',{headers}).pipe(
+        publishLast(),
+        refCount(),
+    )
+}
+``` 
