@@ -124,3 +124,23 @@ export class NoopComponentDeactivate implements CanActivate {
     }
 }
 ```
+
+### Auxiliary routes
+Allow for a certain section of the page to act as kind of a browser window, which changes
+content depending on the route.
+```typescript
+const routes: Routes = [
+    { path: 'whatever', component: MarsComponent },
+    { path: 'auxiliary', component: VenusComponent, outlet: 'outlet-identifier' },
+];
+```
+```angular2html
+<div id="auxiliary">
+    <!-- the auxiliary route must have a name and it's own separate router -->
+    <router-outlet name="outlet-identifier"></router-outlet>
+</div>
+```
+Now, in the url, you need this special and weird syntax
+```
+https://url.ext/whatever(outlet-identifier:/auxiliary)
+```
