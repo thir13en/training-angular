@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { DatePipe } from './shared/pipes/date.pipe';
 import { FilterExamplePipe } from './shared/pipes/filter-example.pipe';
 
+
 @NgModule({
   declarations: [
     AppComponent,

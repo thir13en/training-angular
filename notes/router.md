@@ -144,3 +144,25 @@ Now, in the url, you need this special and weird syntax
 ```
 https://url.ext/whatever(outlet-identifier:/auxiliary)
 ```
+
+### Pass parameters to `auxiliary routes`
+Follow this example:
+```typescript
+const paramValue = 'Netptune';
+this.router.navigateByUrl(`/primary(auxiliary:route;paramName=${paramValue})`);
+```
+To retrieve the parameter:
+```typescript
+export class Component {
+    private parameter: string;
+    constructor(private route: ActivatedRoute) {
+        // same as a standard url parameter
+        this.route.paramMap.subscribe(paramMap => this.parameter = paramMap.get('paramName'));
+        
+    }
+}
+```
+
+### Common pitfalls
+* Remember to use `pathMatch: \"full\"` for a strict url matching.
+* Routes get parsed top bottom, so first routes have + priority.
