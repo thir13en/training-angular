@@ -22,7 +22,11 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "paths": {
+      "@layout/*": ["src/app/layout/*"],
       "@services/*": ["src/app/services/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@store/*": ["src/app/store/*"],
+      "@models/*": ["src/app/models/*"],
       "@testing/*": ["src/app/testing/*"]
     }
   },

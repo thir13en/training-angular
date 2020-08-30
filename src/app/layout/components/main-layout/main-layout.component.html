@@ -1,0 +1,51 @@
+<section id="layout">
+
+  <!-- navbar -->
+  <section id="navbar" class="d-flex bg-primary justify-content-between pl-md2 pr-md2">
+    <div class="d-flex align-items-center">
+      <!-- <img height="66px" src="assets/img/logos/logo_transparent_sm.png" alt="logo ran controller"> -->
+      <h1>LOGO</h1>
+      <h1 class="mat-title c-light ml-md1 mb-none">Demo dashboard</h1>
+    </div>
+    <div class="d-flex align-items-center">
+    <!-- <img src="assets/img/logo.png" alt="logo" width="122" /> -->
+    </div>
+  </section>
+
+  <!-- toolbar -->
+  <mat-toolbar class="bg-dark pr-md2 pl-md2">
+    <app-toggle-hamburger></app-toggle-hamburger>
+  </mat-toolbar>
+
+  <!-- sidenav -->
+  <mat-sidenav-container>
+    <mat-sidenav mode="side" [opened]="sidenavOpened$ | async" class="mat-elevation-z2">
+      <!-- top sidenav image -->
+      <div class="sidenav--img">
+        <h2 class="mat-h2 c-accent text-center">Cuidat</h2>
+      </div>
+
+      <!-- menu nav items -->
+      <mat-nav-list class="p-none">
+        <mat-list-item *ngFor="let item of menuItems" [routerLink]="item.link" routerLinkActive="c-light bg-primary">
+          <a matLine>{{ item.text }}</a>
+          <button mat-icon-button>
+            <mat-icon>{{ item.icon }}</mat-icon>
+          </button>
+        </mat-list-item>
+      </mat-nav-list>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <section>
+        <router-outlet></router-outlet>
+      </section>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+  <!-- footer -->
+  <div class="d-flex justify-content-center align-items-center bg-dark">
+    <p class="c-light">santiloopz -- project template</p>
+  </div>
+
+</section>
