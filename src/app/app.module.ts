@@ -6,14 +6,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 
 import { MainLayoutComponent, ToggleHamburgerComponent } from '@layout/components';
-import { DatePipe } from '@shared/pipes/date.pipe';
-import { FilterExamplePipe } from '@shared/pipes/filter-example.pipe';
+import { DatePipe, FilterExamplePipe } from '@shared/pipes';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 
 @NgModule({
   imports: [
+    BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,

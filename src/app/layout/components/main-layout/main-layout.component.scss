@@ -22,11 +22,5 @@ mat-sidenav-container {
   z-index: 0;
   mat-sidenav {
     width: $sidenav-width;
-    .sidenav--img {
-      height: $sidenav-width * .66;
-      padding-top: $sidenav-width * .44;
-      background-image: url(~src/assets/img/sars-cov-19.jpg);
-      background-size: cover;
-    }
   }
 }
