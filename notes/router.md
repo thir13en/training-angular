@@ -166,3 +166,13 @@ export class Component {
 ### Common pitfalls
 * Remember to use `pathMatch: \"full\"` for a strict url matching.
 * Routes get parsed top bottom, so first routes have + priority.
+
+### Router Hash Location Strategy vs HTML5 Location Strategy
+Prepends a hash to the app routes, good for old legacy browsers that do not support the `html5 history` feature.
+```typescript
+@NgModule({
+    ...
+    providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
+})
+export class AppModule {}
+```
