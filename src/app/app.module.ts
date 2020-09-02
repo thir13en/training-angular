@@ -13,7 +13,6 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   imports: [
-    BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,
