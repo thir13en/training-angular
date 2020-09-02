@@ -12,6 +12,8 @@
 1. [End to End Testing](e2e.md)
 1. [Errors](errors.md)
 1. [General](general.md)
+1. [i18n](i18n.md)
+1. [Lazy Loading](lazy-loading.md)
 1. [Forms](forms/index.md)
 1. [Pitfalls](pitfalls.md)
 1. [Router](router.md)
