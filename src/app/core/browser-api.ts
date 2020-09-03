@@ -1,6 +1,7 @@
 import { StaticProvider } from '@angular/core';
-
 // TODO: get from Document object
+// import { DOCUMENT } from '@angular/common';
+
 // most commonly accessed browser api to use within the context of an Angular Controller
 const getWindowRef = (): (Window & typeof globalThis) | null  => (typeof window !== 'undefined') ? window : null;
 const getDocumentRef = (): Document | null => (typeof document !== 'undefined') ? window.document : null;

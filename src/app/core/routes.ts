@@ -2,14 +2,9 @@ import { InjectionToken } from '@angular/core';
 
 export const ROUTE_FRAGMENTS = {
   ROOT: '/',
-  AREAS: 'areas',
-  TRACKING: 'tracking',
-  NEW: 'new',
+  PARAM: '%s',
 };
 export const ROUTES_LIST = {
-  AREAS: [ROUTE_FRAGMENTS.ROOT, ROUTE_FRAGMENTS.AREAS].join(''),
-  AREAS_NEW: [ROUTE_FRAGMENTS.ROOT, ROUTE_FRAGMENTS.AREAS, ROUTE_FRAGMENTS.NEW].join(''),
-  TRACKING: [ROUTE_FRAGMENTS.ROOT, ROUTE_FRAGMENTS.TRACKING].join(''),
 };
 
 export const ROUTES_INJECTABLE = new InjectionToken<any>(
