@@ -19,4 +19,5 @@ People that have a strong weight within the Angular Ecosystem.
 * Netanel Basal
 * Jennifer Wadella
 * Maxim NgWizard Korietskyi
+* Michael Hladky
 * Joe Eames (NgConf)
