@@ -1,0 +1,14 @@
+<!-- hamburger with animation -->
+<div class="toggle-container">
+  <button class="p-none" mat-button aria-label="Toggle sidenav">
+    <div id="sidenav-toggle"
+         class="pointer"
+         [ngClass]="{ 'open': sidenavOpened$ | async }"
+         (click)="uiStateService.toggleSidenav()"
+    >
+      <span class="bg-light"></span>
+      <span class="bg-light"></span>
+      <span class="bg-light"></span>
+    </div>
+  </button>
+</div>

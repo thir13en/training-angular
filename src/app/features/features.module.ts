@@ -5,6 +5,12 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { FeaturesRoutingModule } from './features-routing.module';
 import { TemplateDrivenFormPasswordValidationComponent } from './template-driven-form-password-validation/template-driven-form-password-validation.component';
+import { HighlightDirective, NgxUnlessDirective } from './directives-demo/directives';
+import {
+  DirectivesExamplesComponent,
+  DirectivesDummyComponent,
+  StrucDirectivesExampleComponent,
+} from './directives-demo/components';
 
 
 @NgModule({
@@ -14,6 +20,13 @@ import { TemplateDrivenFormPasswordValidationComponent } from './template-driven
     MatButtonModule,
     FeaturesRoutingModule,
   ],
-  declarations: [TemplateDrivenFormPasswordValidationComponent],
+  declarations: [
+    HighlightDirective,
+    NgxUnlessDirective,
+    DirectivesExamplesComponent,
+    DirectivesDummyComponent,
+    StrucDirectivesExampleComponent,
+    TemplateDrivenFormPasswordValidationComponent,
+  ],
 })
 export class FeaturesModule {}

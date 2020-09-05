@@ -22,7 +22,15 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "paths": {
-      "@services/*": ["src/app/services/*"],
+      "@assets/*": ["src/assets/*"],
+      "@environments/*": ["src/environments/*"],
+      "@img/*": ["src/assets/img/*"],
+      "@core/*": ["src/app/core/*"],
+      "@features/*": ["src/app/features/*"],
+      "@layout/*": ["src/app/layout/*"],
+      "@network/*": ["src/app/network/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@store/*": ["src/app/store/*"],
       "@testing/*": ["src/app/testing/*"]
     }
   },

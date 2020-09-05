@@ -1,0 +1,26 @@
+@import '../../styles/variables';
+
+#layout {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: $navbar-height $toolbar-height auto $footer-height;
+
+  #navbar {
+    height: $navbar-height;
+  }
+
+}
+mat-toolbar {
+  z-index: 1;
+  box-shadow: 1px 0 10px rgba(0, 0, 0, 0.5);
+  height: $toolbar-height;
+  transition: box-shadow .2s ease-in-out;
+}
+
+mat-sidenav-container {
+  z-index: 0;
+  mat-sidenav {
+    width: $sidenav-width;
+  }
+}

@@ -1,8 +1,8 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { EXAMPLE_SERVICE, exampleServiceProvider } from '@services/provider-example';
-import { ExampleService } from '@services/example.service';
+import { EXAMPLE_SERVICE, exampleServiceProvider } from '../../../../shared/services/provider-example';
+import { ExampleService } from '../../../../shared/services/example.service';
 
 
 @Component({

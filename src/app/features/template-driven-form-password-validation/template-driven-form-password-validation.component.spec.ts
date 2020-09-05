@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { TestingModule } from '@testing/testing.module';
 import { TemplateDrivenFormPasswordValidationComponent } from './template-driven-form-password-validation.component';
@@ -8,7 +8,7 @@ describe('TemplateDrivenFormPasswordValidationComponent', () => {
   let component: TemplateDrivenFormPasswordValidationComponent;
   let fixture: ComponentFixture<TemplateDrivenFormPasswordValidationComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [TestingModule],
       declarations: [TemplateDrivenFormPasswordValidationComponent]
