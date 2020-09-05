@@ -5,6 +5,9 @@ and `Social Networks`. It consists ion `pre-rendering` a specific Angular App Ro
 send it to the client really fast and bootstrap the app from there.
 Angular Universal runs on a `node` `express` server.
 
+By default, SPA's first render is a blank page, because they rely on the JavaScript bundles to be runt
+in order to start rendering the page content.
+
 ### Setup example (might be outdated)
 ```typescript
 import { ng2engine } from 'angular2-universal'; 
