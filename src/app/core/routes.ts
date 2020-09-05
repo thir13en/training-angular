@@ -1,10 +1,13 @@
 import { InjectionToken } from '@angular/core';
 
+
 export const ROUTE_FRAGMENTS = {
-  ROOT: '/',
+  ROOT: '',
+  TEMPLATE_DRIVEN_FORMS: 'template-driven-forms',
   PARAM: '%s',
 };
 export const ROUTES_LIST = {
+  TEMPLATE_DRIVEN_FORMS: [ROUTE_FRAGMENTS.ROOT, ROUTE_FRAGMENTS.TEMPLATE_DRIVEN_FORMS].join('/'),
 };
 
 export const ROUTES_INJECTABLE = new InjectionToken<any>(

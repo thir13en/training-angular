@@ -1,4 +1,4 @@
-import { async, TestBed } from '@angular/core/testing';
+import { TestBed, waitForAsync } from '@angular/core/testing';
 
 import { TestingModule } from '@testing/testing.module';
 import { SocketService } from './socket.service';
@@ -7,7 +7,7 @@ import { SocketService } from './socket.service';
 describe('SocketService', () => {
   let service: SocketService;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [TestingModule],
     });

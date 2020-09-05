@@ -15,10 +15,6 @@ const routes: Routes = [
         loadChildren: () => import('./features/features.module').then(m => m.FeaturesModule),
       },
       {
-        path: 'directives',
-        loadChildren: () => import('./features/directives-demo/directives-demo.module').then(m => m.DirectivesDemoModule),
-      },
-      {
         path: 'ng-di',
         loadChildren: () => import('./features/dependency-injection-demo/dependency-injection-demo.module')
           .then(m => m.DependencyInjectionDemoModule),

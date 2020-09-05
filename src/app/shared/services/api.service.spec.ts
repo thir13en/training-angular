@@ -1,4 +1,4 @@
-import { async, TestBed } from '@angular/core/testing';
+import { TestBed, waitForAsync } from '@angular/core/testing';
 import { HttpClient } from '@angular/common/http';
 
 import { EMPTY } from 'rxjs';
@@ -11,7 +11,7 @@ describe('ApiService', () => {
   let service: ApiService;
   let http: HttpClient;
 
-  beforeEach(async((): void => {
+  beforeEach(waitForAsync((): void => {
     TestBed.configureTestingModule({
       imports: [TestingModule],
       providers: [ApiService],
