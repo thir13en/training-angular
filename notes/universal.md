@@ -1,5 +1,10 @@
 # Angular Universal
 
+`Server Side Rendering` might be useful to deliver speed on first page load, optimize for `SEO`
+and `Social Networks`. It consists ion `pre-rendering` a specific Angular App Route in the server,
+send it to the client really fast and bootstrap the app from there.
+Angular Universal runs on a `node` `express` server.
+
 ### Setup example (might be outdated)
 ```typescript
 import { ng2engine } from 'angular2-universal'; 
