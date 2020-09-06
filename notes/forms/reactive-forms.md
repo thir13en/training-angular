@@ -116,7 +116,7 @@ partialUpdate(): void {
 ```
 Notice that there is no need to set ALL the forms of the field, only those specified will be updated
 
-### Apply an update with `setValue`
+### Set the form with `setValue`
 ```typescript
 partialUpdate(): void {
     this.myForm.setValue({
@@ -127,6 +127,9 @@ partialUpdate(): void {
 }
 ```
 Now you need to set all the fields of the form for the method `setValue` to work.
+
+### Apply an update with `patchValue`
+With `patchValue` you can pass only specific fields of the form to be updated.
 
 ### Reset a form
 ```typescript
