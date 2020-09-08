@@ -16,6 +16,7 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   imports: [
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     AppCoreModule,
     MatToolbarModule,
