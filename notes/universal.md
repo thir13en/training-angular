@@ -5,7 +5,8 @@ and `Social Networks`. It consists ion `pre-rendering` a specific Angular App Ro
 send it to the client really fast and bootstrap the app from there.
 Angular Universal runs on a `node` `express` server.  
 Another reason for using `ssr` is `compatibility with social media crawlers`, for example to display
-beautiful cards when people share our site in social networks.
+beautiful cards when people share our site in social networks.  
+Universal runs the `Server-Side Rendering Layer` instead of the `Client-Side` one.  
 
 By default, SPA's first render is a blank page, because they rely on the JavaScript bundles to be runt
 in order to start rendering the page content.
@@ -77,3 +78,8 @@ ng add @nguniversal/express-engine
 This will generate the files `src/main.server.ts`, `src/app/app.server.module.ts`,
 `src/server.ts`, being those the boostrapper for the server app, the server side rendering
 module and the `express` server.
+
+### Start a Universal app
+1. Make sure you have `BrowserModule` imported.
+1. run the schematic `ng add @nguniversal/express-engine --clientProject`.
+1. In the newly generated "server" `angular.json` key, change the field: `"outputPath": "dist-server"`.
