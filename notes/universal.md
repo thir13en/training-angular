@@ -83,3 +83,4 @@ module and the `express` server.
 1. Make sure you have `BrowserModule` imported.
 1. run the schematic `ng add @nguniversal/express-engine --clientProject`.
 1. In the newly generated "server" `angular.json` key, change the field: `"outputPath": "dist-server"`.
+1. create a new file in the root of your project named `prerender.ts`.
