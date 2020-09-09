@@ -8,10 +8,11 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 
 import { AppCoreModule } from '@core/app-core.module';
-import { MainLayoutComponent, ToggleHamburgerComponent } from '@layout/components';
 import { DatePipe, FilterExamplePipe } from '@shared/pipes';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MainLayoutComponent } from '@layout/components/main-layout/main-layout.component';
+import { ToggleHamburgerComponent } from '@layout/components/toggle-hamburguer/toggle-hamburger.component';
 
 
 @NgModule({
