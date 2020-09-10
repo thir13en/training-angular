@@ -64,3 +64,22 @@ this.cd.markForCheck()
 * After a `setInterval` callback
 * After a Websocket callback
 * After an `alert` has been triggered
+
+### Patching Browser API
+Angular achieves to run custom change detection by patching the native Browser API, with
+something that looks like this.
+```javascript
+// this is the new version of addEventListener
+function addEventListener(eventName, callback) {
+     // call the real addEventListener
+     callRealAddEventListener(eventName, function() {
+        // first call the original callback
+        callback(...);
+        // and then run Angular-specific functionality
+        var changed = angular2.runChangeDetection();
+         if (changed) {
+             angular2.reRenderUIPart();
+         }
+     });
+}
+```
