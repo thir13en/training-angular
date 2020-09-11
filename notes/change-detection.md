@@ -83,3 +83,10 @@ function addEventListener(eventName, callback) {
      });
 }
 ```
+This low-level patching of browser APIs is done by a library shipped with Angular 
+named `zone.js`. A `zone` is nothing more than an execution context that survives multiple 
+`Javascript VM` execution turns. It's a generic mechanism which we can use to add extra 
+functionality to the browser. Angular uses `zones` internally to trigger change detection.  
+One limitation of this mechanism is that if by some reason an asynchronous browser API 
+has no support by `zone.js`, then change detection will not be triggered. This is, 
+for example, the case of `indexedDB` callbacks.
