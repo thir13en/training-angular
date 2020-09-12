@@ -11,10 +11,17 @@ const FEATURES_ROUTES: Routes = [
     component: TemplateDrivenFormPasswordValidationComponent,
   },
   {
-    path: 'directives',
+    path: ROUTE_FRAGMENTS.DIRECTIVES,
     children: [
-      { path: '', component: DirectivesExamplesComponent },
-      { path: 'struc', component: StrucDirectivesExampleComponent },
+      {
+        path: ROUTE_FRAGMENTS.STRUCTURAL,
+        component: StrucDirectivesExampleComponent,
+      },
+      {
+        path: '',
+        pathMatch: 'full',
+        component: DirectivesExamplesComponent,
+      },
     ],
   },
   {
