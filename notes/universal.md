@@ -84,3 +84,4 @@ module and the `express` server.
 1. run the schematic `ng add @nguniversal/express-engine --clientProject`.
 1. In the newly generated "server" `angular.json` key, change the field: `"outputPath": "dist-server"`.
 1. create a new file in the root of your project named `prerender.ts`.
+1. configure the `express` server or use `nguniversal` which already integrates it.
