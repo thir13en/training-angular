@@ -13,6 +13,12 @@ providers: [ClassName],
 providers: [{ provide: ClassName, useClass: ClassName}],
 ```
 
+### Configuring the `Injector`
+The `Injector` can be configured in three places in the Angular Framework:
+1. The `providedIn` property of the `Injectable` decorator.
+1. The `providers` array of the `NgModule` decorator.
+1. The `providers` array of the `Component` decorator.
+
 ### Hierarchical Injection
 1. Look for the service in the providers array of the component
 2. Look for the service in the providers array of the parent component
