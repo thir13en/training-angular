@@ -90,3 +90,9 @@ functionality to the browser. Angular uses `zones` internally to trigger change 
 One limitation of this mechanism is that if by some reason an asynchronous browser API 
 has no support by `zone.js`, then change detection will not be triggered. This is, 
 for example, the case of `indexedDB` callbacks.
+
+### Change Detection and nested properties
+By default, Angular `Change Detection` works by checking if the value of 
+template expressions have changed. This is done for all components.    
+Angular does not do `deep` object comparison to detect changes, it only 
+takes into account properties used by the template. 
