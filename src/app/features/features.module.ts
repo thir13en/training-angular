@@ -29,4 +29,6 @@ import {
     TemplateDrivenFormPasswordValidationComponent,
   ],
 })
-export class FeaturesModule {}
+export class FeaturesModule {
+  constructor() {}
+}

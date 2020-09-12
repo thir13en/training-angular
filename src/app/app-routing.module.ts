@@ -10,14 +10,13 @@ const routes: Routes = [
     component: MainLayoutComponent,
     children: [
       {
-        path: '',
-        pathMatch: 'full',
-        loadChildren: () => import('./features/features.module').then(m => m.FeaturesModule),
-      },
-      {
         path: 'ng-di',
         loadChildren: () => import('./features/dependency-injection-demo/dependency-injection-demo.module')
           .then(m => m.DependencyInjectionDemoModule),
+      },
+      {
+        path: '',
+        loadChildren: () => import('./features/features.module').then(m => m.FeaturesModule),
       },
     ],
   },
