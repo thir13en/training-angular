@@ -7,6 +7,12 @@ export const sidenavItems: MenuItem[] = [
     code: 1,
     text: 'TEMPLATE DRIVEN FORMS',
     link: ROUTES_LIST.TEMPLATE_DRIVEN_FORMS,
-    icon: 'map',
+    icon: 'text_format',
+  },
+  {
+    code: 1,
+    text: 'DIRECTIVES',
+    link: ROUTES_LIST.DIRECTIVES,
+    icon: 'build',
   },
 ];
