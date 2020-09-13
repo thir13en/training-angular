@@ -33,3 +33,9 @@ Converts to json.
 
 * `keyvalue`  
 Returns an array of key value pairs of an object.
+
+* `orderBy`  
+Orders and array by a specific criteria.
+
+* `limitTo`  
+Limits array into specific number of elements.
