@@ -10,6 +10,9 @@
     * TypeScript
     * RxJs
 
+Here you're a graph with the main Angular architecture:  
+![Angular Architecture](https://angular.io/generated/images/guide/architecture/overview2.png)  
+
 ### What are the two main features of the Angular Core?
 The tooling for creating custom Angular Html Elements and the 
 possibility of completely separating the presentation layer, and the business
