@@ -6,6 +6,14 @@ place, looking for changes.
 The tradeoff is that the default change detection mechanism is quite extensive and 
 can cause some performance issues on heavy applications.
 
+### Common pitfalls
+It is quite frequent in newbies in Angular, that they struggle with the `OnPush` change detection
+due to it not running when properties of the object they are passing as an attribute input to the 
+component change. This is due to the fact that the change detector does comparison by reference and not
+deep change property comparison, so the main solution to this problem is to clone or copy the object
+or array that we modified and then assign the new value to the object we are passing down to the 
+component.
+
 ### OnPush Change Detection
 It is also trigger by default via an event handler (click, keyup, etc.),
 Programmatic changes, for instance, assignation in the controller of the component,

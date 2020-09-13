@@ -85,3 +85,31 @@ module and the `express` server.
 1. In the newly generated "server" `angular.json` key, change the field: `"outputPath": "dist-server"`.
 1. create a new file in the root of your project named `prerender.ts`.
 1. configure the `express` server or use `nguniversal` which already integrates it.
+
+### the `ngExpressEngine`
+A rendering Engine that `Angular Universal` provides for us to us within the `express`
+framework. This might be old syntax:
+```javascript
+const express = require('express');
+const app = express();
+const distFolder = __dirname + '/dist';
+enableProdMode();
+
+app.engine('html', ngExpressEngine({
+    bootstrap: AppServerModuleFactory,
+    providers: [provideModuleApp(LAZY_MODULE_MAP)],
+}));
+
+app.set('view engine', 'html');
+app.set('views', distFolder);
+
+// static files with extension
+app.get('*.*', express.static(distFolder, { maxAge: '1y', }));
+
+app.get('*', (req, res) => {
+    // the name of the file we want to render without the extension
+    res.render('index', { req });
+});
+
+app.listen(3000, () => console.log('running...'));
+```
