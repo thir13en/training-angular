@@ -7,7 +7,7 @@ The tradeoff is that the default change detection mechanism is quite expensive a
 can cause some performance issues on heavy applications.
 
 ### OnPush Change Detection
-It is also trigger by default via an event handler (click, keyup, etc.),
+It is also triggered by default via an event handler (click, keyup, etc.),
 Programmatic changes, for instance, assignation in the controller of the component,
 will not trigger a change detection cycle thou. TODO: test this because it is
 likely that changes within the same component template are indeed managed.
