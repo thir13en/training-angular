@@ -1,0 +1,9 @@
+version: "3.5"
+
+services:
+
+  frontend:
+    image: angular-training
+    build: .
+    ports:
+    - 80:80
