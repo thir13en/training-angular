@@ -3,7 +3,7 @@
 By default, the change detection of Angular is runt every time any template
 expression has been changed. Angular scans the whole component tree when events take 
 place, looking for changes.
-The tradeoff is that the default change detection mechanism is quite extensive and 
+The tradeoff is that the default change detection mechanism is quite expensive and 
 can cause some performance issues on heavy applications.
 
 ### Common pitfalls
@@ -15,7 +15,7 @@ or array that we modified and then assign the new value to the object we are pas
 component.
 
 ### OnPush Change Detection
-It is also trigger by default via an event handler (click, keyup, etc.),
+It is also triggered by default via an event handler (click, keyup, etc.),
 Programmatic changes, for instance, assignation in the controller of the component,
 will not trigger a change detection cycle thou. TODO: test this because it is
 likely that changes within the same component template are indeed managed.
