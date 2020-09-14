@@ -3,7 +3,7 @@
 By default, the change detection of Angular is runt every time any template
 expression has been changed. Angular scans the whole component tree when events take 
 place, looking for changes.
-The tradeoff is that the default change detection mechanism is quite extensive and 
+The tradeoff is that the default change detection mechanism is quite expensive and 
 can cause some performance issues on heavy applications.
 
 ### OnPush Change Detection
