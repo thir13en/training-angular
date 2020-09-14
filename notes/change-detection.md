@@ -24,6 +24,12 @@ the change won't be detected and hence template won't be updated.
 It is important to note that if the parent component does create a new 
 pointer for the object being passed to the child, then change detection is able to
 recognize that there is a change and updates the view accordingly.  
+`OnPush` triggers a change detection mechanism when:
+* There is a reference change in a component `Input`
+* An `EventEmmiter` is triggered within a component. 
+* When an `Observable` subscribed in the view fires an event.
+The main risk of `OnPush` change detection mechanism is that it becomes really 
+difficult to manage when we our app allows for mutability of objects.
 
 ### Why OnPush is more performant?
 With Default change detection we check all the expressions in all the component tree
