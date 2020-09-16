@@ -110,3 +110,7 @@ By default, Angular `Change Detection` works by checking if the value of
 template expressions have changed. This is done for all components.    
 Angular does not do `deep` object comparison to detect changes, it only 
 takes into account properties used by the template. 
+
+### Change Detection and Development mode
+In Development mode, change detection are always runt twice, one for the normal change detection cycle and
+a second one to detect changes in properties during the very same change detection cycle, which shouldn't happen.

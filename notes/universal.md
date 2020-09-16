@@ -113,3 +113,15 @@ app.get('*', (req, res) => {
 
 app.listen(3000, () => console.log('running...'));
 ```
+
+### Application Shell
+A skeleton that we use for sending an initial structural load of our app, without most of the
+necessary information.
+```angular2html
+<ng-container *appShellNoRender>
+    // whatever is inside here, won't be rendered at SSR time
+</ng-container>
+<ng-container *appShellRender>
+    // whatever is inside here, will be rendered exclusively at SSR time
+</ng-container>
+```
