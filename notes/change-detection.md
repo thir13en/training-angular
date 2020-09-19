@@ -112,5 +112,11 @@ Angular does not do `deep` object comparison to detect changes, it only
 takes into account properties used by the template. 
 
 ### Change Detection and Development mode
-In Development mode, change detection are always runt twice, one for the normal change detection cycle and
-a second one to detect changes in properties during the very same change detection cycle, which shouldn't happen.
+In Development mode, change detection are always runt twice, one for the normal 
+change detection cycle, and a second one to detect changes in properties during the 
+very same change detection cycle, which shouldn't happen.
+
+### What Is the Digest Cycle?
+Digest cycle is the process of monitoring watchlist to track the changes in the 
+value of the watch variable. The digest cycle triggers implicitly, but we can also 
+trigger it manually using `$apply()` function.

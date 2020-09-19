@@ -39,3 +39,9 @@ Orders and array by a specific criteria.
 
 * `limitTo`  
 Limits array into specific number of elements.
+
+
+### Parametrized pipe syntax
+```angular2html
+<p>Price is {{ price | currency : 'USD$' : 0.00 }}</p> 
+```

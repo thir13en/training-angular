@@ -125,3 +125,48 @@ necessary information.
     // whatever is inside here, will be rendered exclusively at SSR time
 </ng-container>
 ```
+Implementing the directives...
+```typescript
+@Directive({
+    selector: [appShellNoRender],
+})
+export class ShellNoRender implements OnInit {
+
+    constructor(
+        private viewContainer: ViewContainerRef,
+        private templateRef: TemplateRef<any>,
+        @Inject(PLATFORM_ID) private platformId: any,
+    ) {}
+
+    ngOnInit(): void {
+        if (isPlatformServer(platformId)) {
+            this.viewContainer.clear();
+        } else {
+            this.viewContainer.createEmbeddedView(this.templateRef);
+        }
+    }
+
+}
+```
+```typescript
+@Directive({
+    selector: [appShellRender],
+})
+export class ShellRender implements OnInit {
+
+    constructor(
+        private viewContainer: ViewContainerRef,
+        private templateRef: TemplateRef<any>,
+        @Inject(PLATFORM_ID) private platformId: any,
+    ) {}
+
+    ngOnInit(): void {
+        if (isPlatformServer(platformId)) {
+            this.viewContainer.createEmbeddedView(this.templateRef);
+        } else {
+            this.viewContainer.clear();
+        }
+    }
+
+}
+```
