@@ -170,3 +170,10 @@ export class ShellRender implements OnInit {
 
 }
 ```
+
+### Angular Universal State Transfer API
+Useful when we are server side rendering an SPA page, and we already have available
+information that would normally be requested via an AJAX request. What can happen is 
+that the server side rendering process already fetched this information and due to the
+app initialization process on the client, this AJAX XHR request will trigger again.  
+
