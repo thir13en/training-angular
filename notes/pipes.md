@@ -45,3 +45,16 @@ Limits array into specific number of elements.
 ```angular2html
 <p>Price is {{ price | currency : 'USD$' : 0.00 }}</p> 
 ```
+
+### Custom Pipe implementation
+Every pipe must apply the method `transform()`, and the decorator syntax is as follows:
+```angular2
+@Pipe({
+	name: 'pipeName'
+})
+export class PipeName {
+	transform() {
+		// pipe transform here
+	}
+}
+```
