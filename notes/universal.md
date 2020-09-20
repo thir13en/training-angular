@@ -176,4 +176,45 @@ Useful when we are server side rendering an SPA page, and we already have availa
 information that would normally be requested via an AJAX request. What can happen is 
 that the server side rendering process already fetched this information and due to the
 app initialization process on the client, this AJAX XHR request will trigger again.  
+Here you are and example on how to use it for instance in a route resolver:
+```angular2
+@Injectable()
+export class ElementResolver implements Resolver<Element> {
+    constructor(
+        private api: ApiService,
+        @Inject(PLATFORM_ID) platformId: any,
+        private transferState: TransferState,
+    ) {}
+
+    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Element> {
+        const elementId = route.params.id;
+        // define a transfer key
+        const ELEMENT_KEY = makeStateKey<Element>(`element-${elementId}`);
+
+        if (this.transferState.hasKey(ELEMENT_KEY)) {
+            // the second parameter is a default value to use if the data for transfer is not present
+            const element = this.transferState.get<Element>(ELEMENT_KEY, null);
+            
+            // now that we have the data, it is ok to remove it
+            this.transferState.remove(ELEMENT_KEY);
+            
+            return observableOf(element);
+        } else {
+            // in case we don't have the data, we can set it via a side effect
+            return this.api.get(ENDPOINTS.GET_ELEMENT).pipe(
+                first(),
+                tap(element => {
+                    // we can only do this is we are on the server side rendering cycle
+                    if (isPlatformServer(this.platformId)) {
+                        this.transferState.set(ELEMENT_KEY, element)
+                    }
+                }),
+            );
+
+        }
+
+    }
+
+}
+```  
 
