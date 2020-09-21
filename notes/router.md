@@ -176,3 +176,25 @@ Prepends a hash to the app routes, good for old legacy browsers that do not supp
 })
 export class AppModule {}
 ```
+
+### Router navigation events
+Keep track of the lifecycle of a route. These are:
+```
+* NavigationStart,
+* RouteConfigLoadStart,
+* RouteConfigLoadEnd,
+* RoutesRecognized,
+* GuardsCheckStart,
+* ChildActivationStart,
+* ActivationStart,
+* GuardsCheckEnd,
+* ResolveStart,
+* ResolveEnd,
+* ActivationEnd
+* ChildActivationEnd
+* NavigationEnd,
+* NavigationCancel,
+* NavigationError
+* Scroll
+```
+
