@@ -19,7 +19,7 @@ You can do so in the `index.html` file using the following tag:
 You do so with the `wildcard` route, in this way:
 ```typescript
 const routes: Routes = [
-    { path: '', component: ComponentName }
+    { path: '**', component: ComponentName }
 ];
 ```
 
