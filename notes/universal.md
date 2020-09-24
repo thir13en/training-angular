@@ -177,7 +177,7 @@ information that would normally be requested via an AJAX request. What can happe
 that the server side rendering process already fetched this information and due to the
 app initialization process on the client, this AJAX XHR request will trigger again.  
 Here you are and example on how to use it for instance in a route resolver:
-```angular2
+```typescript
 @Injectable()
 export class ElementResolver implements Resolver<Element> {
     constructor(
