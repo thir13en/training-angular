@@ -1,16 +1,20 @@
 import 'zone.js/dist/zone-node';
 
 import { ngExpressEngine } from '@nguniversal/express-engine';
+// @ts-ignore
 import * as express from 'express';
+// @ts-ignore
 import { join } from 'path';
 
 import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
+// @ts-ignore
 import { existsSync } from 'fs';
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();
+  // @ts-ignore
   const distFolder = join(process.cwd(), 'dist/angular-training/dist');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
 
@@ -30,7 +34,7 @@ export function app(): express.Express {
   }));
 
   // All regular routes use the Universal engine
-  server.get('*', (req, res) => {
+  server.get('*', (req: any, res: any) => {
     res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });
   });
 
@@ -38,6 +42,7 @@ export function app(): express.Express {
 }
 
 function run(): void {
+  // @ts-ignore
   const port = process.env.PORT || 4000;
 
   // Start up the Node server
@@ -50,9 +55,11 @@ function run(): void {
 // Webpack will replace 'require' with '__webpack_require__'
 // '__non_webpack_require__' is a proxy to Node 'require'
 // The below code is to ensure that the server is run only when not requiring the bundle.
+// @ts-ignore
 declare const __non_webpack_require__: NodeRequire;
 const mainModule = __non_webpack_require__.main;
 const moduleFilename = mainModule && mainModule.filename || '';
+// @ts-ignore
 if (moduleFilename === __filename || moduleFilename.includes('iisnode')) {
   run();
 }
