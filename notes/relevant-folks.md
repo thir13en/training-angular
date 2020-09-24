@@ -17,6 +17,7 @@ People that have a strong weight within the Angular Ecosystem.
 * Todd Motto
 * Uri Shaked
 * Netanel Basal
+* Manfred Steyer
 * Jennifer Wadella
 * Maxim NgWizard Korietskyi
 * Michael Hladky
