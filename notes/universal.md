@@ -216,5 +216,45 @@ export class ElementResolver implements Resolver<Element> {
     }
 
 }
-```  
+```
 
+### Deploy Universal App in Firebase
+You can find an example on how to deploy [here](https://github.com/davideast/angular-universal-express-firebase).
+```typescript
+import * as functions from 'firebase-cloud-functions';
+import * as angularUniversal from 'angular-universal-express-firebase';
+
+export const ssrApp = angularUniversal.trigger({
+  index: __dirname + './index-server.html',
+  main: __dirname + './main.bundle',
+  enableProdMode: true,
+  cdnCacheExpiry: 600,
+  browserCacheExpiry: 300,
+  staleWhileRevalidate: 120,
+  extraProviders: [
+      provideModuleMap(LAZY_MODULE_MAP)
+  ]
+});
+```
+Install the `angular-universal-express-firebase` package inside the `functions` folder, which you'll
+have once you init the firebase setup (check in google tools repository).
+```bash
+$ npm i -S angular-universal-express-firebase
+```
+Also, now you need to change the `outDir` of your `angular.json` to point to `functions/lib`.  
+In addition, add this command to your `package.json` scripts:
+```json
+{
+  "move-index": "mv ./dist/index.html ./functions/lib/index-server.html"
+}
+```
+Now, run:
+```bash
+npm run build:client-app:prod
+# frontend build is completed
+npm run build:server-app:prod
+# production build is completed
+npm run move-index
+```
+To finish, copy all production `dependencies` of your main `package.json` to the functions `package.json`. Now
+run `npm i` inside the `functions` folder.

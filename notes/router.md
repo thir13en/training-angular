@@ -141,8 +141,10 @@ const routes: Routes = [
 </div>
 ```
 Now, in the url, you need this special and weird syntax
-```
+```bash
 https://url.ext/whatever(outlet-identifier:/auxiliary)
+# another example
+`/lessons(aside:playlist//leftmenu:/some/path)`
 ```
 
 ### Pass parameters to `auxiliary routes`
