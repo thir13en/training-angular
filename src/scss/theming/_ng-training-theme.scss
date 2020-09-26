@@ -20,6 +20,19 @@ $dark:  mat-palette($ng-training-dark);
 @include angular-material-theme($light-theme);
 @include custom-components($light-theme);
 
+.c-primary { color: map-get($ng-training-primary, 500) !important; }
+.c-accent { color: map-get($ng-training-accent, 500) !important; }
+.c-warn { color: map-get($ng-training-warn, 500) !important; }
+.c-light { color: map-get($ng-training-light, 500) !important; }
+.c-dark { color: map-get($ng-training-dark, 500) !important; }
+.c-white { color: #fff !important; }
+
+.bg-primary { background-color: map-get($ng-training-primary, 500) !important; }
+.bg-accent { background-color: map-get($ng-training-accent, 500) !important; }
+.bg-warn { background-color: map-get($ng-training-warn, 500) !important; }
+.bg-light { background-color: map-get($ng-training-light, 500) !important; }
+.bg-dark { background-color: map-get($ng-training-dark, 500) !important; }
+.bg-white { background-color: #fff !important; }
 
 /** ------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------
@@ -34,6 +47,21 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 .ng-training-dark-theme {
   @include angular-material-theme($dark-theme);
   @include custom-components($dark-theme);
+
+  // TODO: select dark theme colors
+  .c-primary { color: map-get($ng-training-primary, 500) !important; }
+  .c-accent { color: map-get($ng-training-accent, 500) !important; }
+  .c-warn { color: map-get($ng-training-warn, 500) !important; }
+  .c-light { color: map-get($ng-training-light, 500) !important; }
+  .c-dark { color: map-get($ng-training-dark, 500) !important; }
+  .c-white { color: #fff !important; }
+
+  .bg-primary { background-color: map-get($ng-training-primary, 500) !important; }
+  .bg-accent { background-color: map-get($ng-training-accent, 500) !important; }
+  .bg-warn { background-color: map-get($ng-training-warn, 500) !important; }
+  .bg-light { background-color: map-get($ng-training-light, 500) !important; }
+  .bg-dark { background-color: map-get($ng-training-dark, 500) !important; }
+  .bg-white { background-color: #fff !important; }
 }
 
 /** ------------------------------------------------------------------------------------------------------------------
