@@ -22,6 +22,7 @@
 1. [Profiling](profiling.md)
 1. [Redux](redux.md)
 1. [Router](router.md)
+1. [RxJs](rxjs.md)
 1. [Styling](styling.md)
 1. [Talented Dudes](relevant-folks.md)
 1. [State Management](state-management.md)

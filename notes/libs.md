@@ -27,3 +27,9 @@ examples
 node_modules
 src 
 ```
+
+### Command for creating a library
+```bash
+ng new my-workspace --create-application=false cd my-workspace
+ng generate library my-lib
+```
