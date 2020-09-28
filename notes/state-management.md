@@ -1,5 +1,15 @@
 # State Management
 
+
+### Motivation
+One of the main reasons why we would like to rely on a state management system is to dramatically
+reduce the number of `http` request that we have to fetch from the server, which potentially can cause
+performance issues when we scale the app to a large number of users.  
+Improving the user experience, making the app faster and smoother to navigate is another big reason
+to add a state management layer to our app.  
+The third and really important issue that state management systems aim at solving, is to reflect
+in the UI the updated state of the application in sync with the Backend.
+
 ## Redux-like
 ### You probably don't need Redux, here's when you will need it
 * Multiple parts of your app display differently the **same data**
