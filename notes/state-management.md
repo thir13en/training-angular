@@ -8,7 +8,16 @@ performance issues when we scale the app to a large number of users.
 Improving the user experience, making the app faster and smoother to navigate is another big reason
 to add a state management layer to our app.  
 The third and really important issue that state management systems aim at solving, is to reflect
-in the UI the updated state of the application in sync with the Backend.
+in the UI the updated state of the application in sync with the Backend.  
+
+### Uni-directional data flow
+We need to make sure in an `MVC` application, if we modify the `Model`, changes are reflected
+in the `View` of the application. In `Angular`, this is done automagically, so we have out-of-the-box
+`Model/View` synchronization. One thing we need to make sure, is that the updates in the view do not trigger
+new changes in the model. This is known as `unidirectional data flow`, and helps a lot in keeping the
+application easy to reason about.
+In `development mode` in `Angular`, the cycle to update the view executes twice, and if the result of both
+executions is not idempotent (exactly same results) we get the infamous error `ExpressionChangedAfterItHasBeenCheckedError`.
 
 ## Redux-like
 ### You probably don't need Redux, here's when you will need it
