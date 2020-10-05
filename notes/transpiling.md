@@ -39,3 +39,15 @@ As you can see, the constructor is extended to receive some core injectables, li
 The compiler uses the renderer to output the HTML by creating DOM elements, text content etc.
 This is actually what an Angular renderer looks like under the hood, and except for the names of the 
 variables it's actually quite close to what we would have written by hand.
+
+### Static bootstrapping
+After running the `ngc` manually to obtain a Component Facotory, we can statically bootstrap the app
+with the `platformBrowser` utility:
+```typescript
+import { platformBrowser } from '@angular/platform-browser';
+import { AppModuleNgFactory } from './main.ngfactory';
+
+// Launch with the app module factory.
+platformBrowser().bootstrapModuleFactory(AppModuleNgFactory);
+```
+This is what happens under the hood when we do `ng build --prod`
