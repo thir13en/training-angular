@@ -33,3 +33,7 @@ export class AppModule {}
 ```
 This needs further experimentation on my side to check, probably this behaviour changed in the last
 version of `Angular`.
+
+### Declaring Lazy Loaded Modules
+You should use the `default` keyword when exporting Lazy Loaded modules, this information might
+be outdated, check it out.
