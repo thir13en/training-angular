@@ -9,6 +9,7 @@
     "outDir": "./dist/out-tsc",
     "module": "es2020",
     "target": "es2016",
+    "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "strictPropertyInitialization": false,
@@ -19,7 +20,6 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
     "importHelpers": true,
     "paths": {
       "@assets/*": ["src/assets/*"],
