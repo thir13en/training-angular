@@ -35,6 +35,29 @@ mapping of certain data into it.
     let odd as isOdd;
 "
 ```
+In the specific case of `ngfor`, we can use `trackBy` to improve efficiency in `DOM` re-renders. So in the `ts`:
+```typescript
+export class Heroes {
+
+    heroes = HEROES;
+
+    trackHero(index, hero) {
+        return hero ? hero.id : undefined;
+    }
+} 
+```
+```angular2html
+<table>
+    <thead>
+        <th>Name</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let hero of heroes; trackBy: trackHero" >
+            <td>{{hero.name}}</td>
+        </tr>
+    </tbody>
+</table>
+```
 
 * `*ngIf` syntax:
 The directive is responsive to turn the expression into a boolean.  
