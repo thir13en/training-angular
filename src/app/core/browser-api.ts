@@ -1,28 +1,49 @@
-import { StaticProvider } from '@angular/core';
-// TODO: get from Document object
-// import { DOCUMENT } from '@angular/common';
+import { InjectionToken } from '@angular/core';
+
 
 // most commonly accessed browser api to use within the context of an Angular Controller
 const getWindowRef = (): (Window & typeof globalThis) | null  => (typeof window !== 'undefined') ? window : null;
-const getDocumentRef = (): Document | null => (typeof document !== 'undefined') ? window.document : null;
 const getLocalStorage = (): Storage | null => (typeof window !== 'undefined') ? window.localStorage : null;
 const getLocation = (): Location | null => (typeof window !== 'undefined') ? window.location : null;
 const getNavigator = (): Navigator | null => (typeof window !== 'undefined') ? window.navigator : null;
 const getFileReader = (): FileReader | null => (typeof (FileReader) !== 'undefined') ? new FileReader() : null;
 
-// the providers
-export const WINDOW_PROVIDER = { provide: 'WINDOW', useFactory: getWindowRef };
-export const DOCUMENT_PROVIDER = { provide: 'DOCUMENT', useFactory: getDocumentRef };
-export const LOCALSTORAGE_PROVIDER = { provide: 'LOCALSTORAGE', useFactory: getLocalStorage };
-export const LOCATION_PROVIDER = { provide: 'LOCATION', useFactory: getLocation };
-export const NAVIGATOR_PROVIDER = { provide: 'NAVIGATOR', useFactory: getNavigator };
-export const FILE_READER_PROVIDER = { provide: 'FILE_READER', useFactory: getFileReader };
+export const WINDOW = new InjectionToken<Window | null>(
+  'Abstraction over the window object',
+  {
+    providedIn: 'root',
+    factory: getWindowRef,
+  }
+);
 
-export const BROWSER_API_PROVIDERS: StaticProvider[] = [
-  WINDOW_PROVIDER,
-  DOCUMENT_PROVIDER,
-  LOCALSTORAGE_PROVIDER,
-  LOCATION_PROVIDER,
-  NAVIGATOR_PROVIDER,
-  FILE_READER_PROVIDER,
-];
+export const LOCAL_STORAGE = new InjectionToken<Storage | null>(
+  'Abstraction over the window.localStorage object',
+  {
+    providedIn: 'root',
+    factory: getLocalStorage,
+  }
+);
+
+export const LOCATION = new InjectionToken<Location | null>(
+  'Abstraction over the window.location object',
+  {
+    providedIn: 'root',
+    factory: getLocation,
+  }
+);
+
+export const NAVIGATOR = new InjectionToken<Navigator | null>(
+  'Abstraction over the window.navigator object',
+  {
+    providedIn: 'root',
+    factory: getNavigator,
+  }
+);
+
+export const FILE_READER = new InjectionToken<FileReader | null>(
+  'Abstraction over the a fileReader navigator class',
+  {
+    providedIn: 'root',
+    factory: getFileReader,
+  }
+);

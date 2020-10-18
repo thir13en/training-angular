@@ -7,17 +7,11 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
-import { BROWSER_API_PROVIDERS } from './browser-api';
 import { BrowserUnsupportedComponent, NotFoundComponent } from './pages';
 
 
 @NgModule({
-  providers: [
-    BROWSER_API_PROVIDERS,
-  ],
-  exports: [
-    HttpClientModule,
-  ],
+  exports: [HttpClientModule],
   declarations: [BrowserUnsupportedComponent, NotFoundComponent]
 })
 export class AppCoreModule {
