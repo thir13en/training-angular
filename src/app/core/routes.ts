@@ -28,5 +28,3 @@ export const ROUTES_FRAGMENTS_INJECTABLE = new InjectionToken<any>(
     factory: () => ROUTE_FRAGMENTS
   }
 );
-
-// TODO: configure routes
