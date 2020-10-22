@@ -1,4 +1,4 @@
-import { InjectionToken } from '@angular/core';
+import { inject, InjectionToken } from '@angular/core';
 
 
 // most commonly accessed browser api to use within the context of an Angular Controller
@@ -6,8 +6,12 @@ const getWindowRef = (): (Window & typeof globalThis) | null  => (typeof window 
 const getLocalStorage = (): Storage | null => (typeof window !== 'undefined') ? window.localStorage : null;
 const getLocation = (): Location | null => (typeof window !== 'undefined') ? window.location : null;
 const getNavigator = (): Navigator | null => (typeof window !== 'undefined') ? window.navigator : null;
+const getGeolocation = (): Geolocation | null => (typeof window !== 'undefined') ? window.navigator?.geolocation : null;
 const getFileReader = (): FileReader | null => (typeof (FileReader) !== 'undefined') ? new FileReader() : null;
 
+/*****************************************************************************************************
+ * INJECTION TOKENS **********************************************************************************
+ ****************************************************************************************************/
 export const WINDOW = new InjectionToken<Window | null>(
   'Abstraction over the window object',
   {
@@ -46,4 +50,27 @@ export const FILE_READER = new InjectionToken<FileReader | null>(
     providedIn: 'root',
     factory: getFileReader,
   }
+);
+
+export const GEOLOCATION = new InjectionToken<Geolocation>(
+  'An abstraction over window.navigator.geolocation object',
+  {
+    providedIn: 'root',
+    factory: () => inject(NAVIGATOR).geolocation,
+  },
+);
+
+export const POSITION_OPTIONS = new InjectionToken<PositionOptions>(
+  'Token for an additional position options',
+  { factory: () => ({}) },
+);
+
+/*****************************************************************************************************
+ * SUPPORT *******************************************************************************************
+ ****************************************************************************************************/
+export const GEOLOCATION_SUPPORT = new InjectionToken<boolean>(
+  'Is Geolocation API supported?',
+  {
+    factory: () => !!inject(GEOLOCATION),
+  },
 );

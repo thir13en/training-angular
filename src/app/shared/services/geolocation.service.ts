@@ -1,9 +1,17 @@
-import { Injectable } from '@angular/core';
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class GeolocationService {
+export class GeolocationService extends Observable<Position> {
+  constructor(
+    @Inject(GEOLOCATION) geolocationRef: Geolocation) {
 
-  constructor() { }
+
+    super(subscriber => {
+
+      geolocationRef.watchPosition(
+        position => subscriber.next(position),
+        positionError => subscriber.error(positionError),
+      );
+    });
+  }
 }
