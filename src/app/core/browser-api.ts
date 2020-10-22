@@ -2,12 +2,12 @@ import { inject, InjectionToken } from '@angular/core';
 
 
 // most commonly accessed browser api to use within the context of an Angular Controller
-const getWindowRef = (): (Window & typeof globalThis) | null  => (typeof window !== 'undefined') ? window : null;
-const getLocalStorage = (): Storage | null => (typeof window !== 'undefined') ? window.localStorage : null;
-const getLocation = (): Location | null => (typeof window !== 'undefined') ? window.location : null;
-const getNavigator = (): Navigator | null => (typeof window !== 'undefined') ? window.navigator : null;
-const getGeolocation = (): Geolocation | null => (typeof window !== 'undefined') ? window.navigator?.geolocation : null;
-const getFileReader = (): FileReader | null => (typeof (FileReader) !== 'undefined') ? new FileReader() : null;
+const getWindowRef = (): (Window & typeof globalThis) | null  => window || null;
+const getLocalStorage = (): Storage | null => window?.localStorage || null;
+const getLocation = (): Location | null => window?.location || null;
+const getNavigator = (): Navigator | null => window?.navigator || null;
+const getGeolocation = (): Geolocation | null => window?.navigator?.geolocation || null;
+const getFileReader = (): FileReader | null => FileReader ? new FileReader() : null;
 
 /*****************************************************************************************************
  * INJECTION TOKENS **********************************************************************************
@@ -52,11 +52,11 @@ export const FILE_READER = new InjectionToken<FileReader | null>(
   }
 );
 
-export const GEOLOCATION = new InjectionToken<Geolocation>(
+export const GEOLOCATION = new InjectionToken<Geolocation | null>(
   'An abstraction over window.navigator.geolocation object',
   {
     providedIn: 'root',
-    factory: () => inject(NAVIGATOR).geolocation,
+    factory: getGeolocation,
   },
 );
 
