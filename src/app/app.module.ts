@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainLayoutComponent } from '@layout/components/main-layout/main-layout.component';
 import { ToggleHamburgerComponent } from '@layout/components/toggle-hamburguer/toggle-hamburger.component';
+import { ResizeObserverDirective } from '@shared/directives/resize-observer-directive.directive';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { ToggleHamburgerComponent } from '@layout/components/toggle-hamburguer/t
     MainLayoutComponent,
     DatePipe,
     FilterExamplePipe,
+    ResizeObserverDirective,
   ],
   bootstrap: [AppComponent],
 })
