@@ -5,7 +5,7 @@ import { Attribute } from '@angular/compiler';
 import { Observable } from 'rxjs';
 
 
-// TODO: create this provider
+// TODO: create this provider https://medium.com/its-tinkoff/service-as-observable-29ce7fa9085b
 function RESIZE_OPTION_BOX() {}
 function boxFactory() {}
 
