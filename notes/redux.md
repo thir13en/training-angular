@@ -17,3 +17,12 @@ if we do not centralize the way this information is manages, we have to develop 
 manage it in many places, which makes the application exponentially more complex, so is it
 a matter of creating applications that scale on complexity. In `NgRx` the concept of `dispatcher`
 and `store` have been added together in one single service.
+
+### When to use it
+A good guideline that might help answer the question, "Do I need NgRx Store?" is the SHARI principle:
+
+* **Shared**: state that is accessed by many components and services.
+* **Hydrated**: state that is persisted and rehydrated from external storage.
+* **Available**: state that needs to be available when re-entering routes.
+* **Retrieved**: state that must be retrieved with a side-effect.
+* **Impacted**: state that is impacted by actions from other sources.
