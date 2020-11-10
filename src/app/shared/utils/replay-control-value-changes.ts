@@ -9,14 +9,14 @@ import { startWith } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ReplayControlValueChanges<T> extends Observable<T> {
-  constructor(control: AbstractControl | AbstractControlDirective) {
+  constructor(private control: AbstractControl | AbstractControlDirective) {
     super(subscriber => {
       if (!control.valueChanges) {
         throw new Error('Control does not have valueChanges');
       }
 
       control.valueChanges.pipe(
-        startWith(control.value)
+        startWith(control.value),
       ).subscribe(subscriber);
     });
   }
