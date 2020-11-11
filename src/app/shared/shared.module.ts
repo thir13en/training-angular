@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+
+import { DatePipe, FilterExamplePipe } from '@shared/pipes';
 import { ResizeObserverDirective } from '@shared/directives/resize-observer-directive.directive';
 
 
@@ -8,9 +10,13 @@ import { ResizeObserverDirective } from '@shared/directives/resize-observer-dire
     FormsModule,
   ],
   declarations: [
+    DatePipe,
+    FilterExamplePipe,
     ResizeObserverDirective,
   ],
   exports: [
+    DatePipe,
+    FilterExamplePipe,
     ResizeObserverDirective,
   ],
 })

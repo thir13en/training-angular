@@ -8,12 +8,10 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 
 import { AppCoreModule } from '@core/app-core.module';
-import { DatePipe, FilterExamplePipe } from '@shared/pipes';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainLayoutComponent } from '@layout/components/main-layout/main-layout.component';
 import { ToggleHamburgerComponent } from '@layout/components/toggle-hamburguer/toggle-hamburger.component';
-import { ResizeObserverDirective } from '@shared/directives/resize-observer-directive.directive';
 
 
 @NgModule({
@@ -33,9 +31,6 @@ import { ResizeObserverDirective } from '@shared/directives/resize-observer-dire
     AppComponent,
     ToggleHamburgerComponent,
     MainLayoutComponent,
-    DatePipe,
-    FilterExamplePipe,
-    ResizeObserverDirective,
   ],
   bootstrap: [AppComponent],
 })
