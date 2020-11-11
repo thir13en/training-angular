@@ -9,15 +9,15 @@ import { startWith } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ReplayControlValueChanges<T> extends Observable<T> {
-  // constructor() {
-    // super(subscriber => {
-    //   if (!control.valueChanges) {
-    //     throw new Error('Control does not have valueChanges');
-    //   }
-    //
-    //   control.valueChanges.pipe(
-    //     startWith(control.value),
-    //   ).subscribe(subscriber);
-    // });
-  // }
+  constructor(control: AbstractControl) {
+    super(subscriber => {
+      if (!control.valueChanges) {
+        throw new Error('Control does not have valueChanges');
+      }
+
+      control.valueChanges.pipe(
+        startWith(control.value),
+      ).subscribe(subscriber);
+    });
+  }
 }
