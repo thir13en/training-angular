@@ -204,7 +204,7 @@ export class ElementResolver implements Resolver<Element> {
             return this.api.get(ENDPOINTS.GET_ELEMENT).pipe(
                 first(),
                 tap(element => {
-                    // we can only do this is we are on the server side rendering cycle
+                    // we can only do this is we are on the universal side rendering cycle
                     if (isPlatformServer(this.platformId)) {
                         this.transferState.set(ELEMENT_KEY, element)
                     }
@@ -225,7 +225,7 @@ import * as functions from 'firebase-cloud-functions';
 import * as angularUniversal from 'angular-universal-express-firebase';
 
 export const ssrApp = angularUniversal.trigger({
-  index: __dirname + './index-server.html',
+  index: __dirname + './index-universal.html',
   main: __dirname + './main.bundle',
   enableProdMode: true,
   cdnCacheExpiry: 600,
@@ -245,7 +245,7 @@ Also, now you need to change the `outDir` of your `angular.json` to point to `fu
 In addition, add this command to your `package.json` scripts:
 ```json
 {
-  "move-index": "mv ./dist/index.html ./functions/lib/index-server.html"
+  "move-index": "mv ./dist/index.html ./functions/lib/index-universal.html"
 }
 ```
 Now, run:

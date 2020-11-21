@@ -10,8 +10,8 @@
     ]
   },
   "files": [
-    "src/server/main.server.ts",
-    "src/server/server.ts"
+    "src/universal/main.server.ts",
+    "src/universal/server.ts"
   ],
   "angularCompilerOptions": {
     "entryModule": "./src/app/app.server.module#AppServerModule"

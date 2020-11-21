@@ -25,7 +25,7 @@ export function app(): express.Express {
   server.set('views', distFolder);
 
   // Example Express Rest API endpoints
-  // server.get('/api/**', (req, res) => { });
+  // universal.get('/api/**', (req, res) => { });
   // Serve static files from /browser
   server.get('*.*', express.static(distFolder, {
     maxAge: '1y'
@@ -43,7 +43,7 @@ function run(): void {
   // @ts-ignore
   const port = process.env.PORT || 4000;
 
-  // Start up the Node server
+  // Start up the Node universal
   const server = app();
   server.listen(port, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
@@ -52,7 +52,7 @@ function run(): void {
 
 // Webpack will replace 'require' with '__webpack_require__'
 // '__non_webpack_require__' is a proxy to Node 'require'
-// The below code is to ensure that the server is run only when not requiring the bundle.
+// The below code is to ensure that the universal is run only when not requiring the bundle.
 // @ts-ignore
 declare const __non_webpack_require__: NodeRequire;
 const mainModule = __non_webpack_require__.main;

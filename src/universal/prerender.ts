@@ -4,7 +4,7 @@ import { renderModuleFactory } from '@angular/platform-server';
 import { writeFileSync } from 'fs';
 
 
-const { AppServerModuleNgFactory } = require('./dist-server/main');
+const { AppServerModuleNgFactory } = require('./dist-universal/main');
 
 renderModuleFactory(AppServerModuleNgFactory, {
   document: '<app-root></app-root>',
