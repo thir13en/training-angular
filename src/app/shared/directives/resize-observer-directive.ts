@@ -1,5 +1,4 @@
 import { Directive, Inject, Output } from '@angular/core';
-import { Attribute } from '@angular/compiler';
 
 import { Observable } from 'rxjs';
 import { ResizeObserverService } from '@shared/services';
@@ -15,7 +14,7 @@ function boxFactory() {}
     ResizeObserverService,
     {
       provide: RESIZE_OPTION_BOX,
-      // deps: [[new Attribute('appResizeBox')]],
+      deps: [[new Attribute('appResizeBox')]],
       useFactory: boxFactory,
     },
   ],
