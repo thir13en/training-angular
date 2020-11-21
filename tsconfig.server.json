@@ -1,5 +1,6 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
+  "baseUrl": "./",
   "extends": "./tsconfig.app.json",
   "compilerOptions": {
     "outDir": "./out-tsc/server",
@@ -9,8 +10,8 @@
     ]
   },
   "files": [
-    "src/main.server.ts",
-    "server.ts"
+    "src/server/main.server.ts",
+    "src/server/server.ts"
   ],
   "angularCompilerOptions": {
     "entryModule": "./src/app/app.server.module#AppServerModule"

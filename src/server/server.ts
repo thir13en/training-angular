@@ -3,12 +3,10 @@ import 'zone.js/dist/zone-node';
 import { ngExpressEngine } from '@nguniversal/express-engine';
 
 import * as express from 'express';
-// @ts-ignore
 import { join } from 'path';
 
-import { AppServerModule } from './src/main.server';
+import { AppServerModule } from './main.server';
 import { APP_BASE_HREF } from '@angular/common';
-// @ts-ignore
 import { existsSync } from 'fs';
 
 // The Express app is exported so that it can be used by serverless Functions.
@@ -64,4 +62,4 @@ if (moduleFilename === __filename || moduleFilename.includes('iisnode')) {
   run();
 }
 
-export * from './src/main.server';
+export * from './main.server';
