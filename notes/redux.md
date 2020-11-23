@@ -11,6 +11,9 @@ These are the four elements of the `Flux` architecture:
 ![redux1](img/redux1.png)  
 Notice the uni-directional data flow, which makes things much, much simpler on scale.  
 
+### Why
+Redux creates applications that are scalable, predictable in the way they will scale and are easy to reason about if we follow the conventions. Plus, it guarantees uni-directional data flow.
+
 ### The most common Redux-like solution for Angular is NgRx
 Redux is specially useful for apps that display the same information in many ways,
 if we do not centralize the way this information is manages, we have to develop strategies to
