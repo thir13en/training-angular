@@ -29,3 +29,10 @@ A good guideline that might help answer the question, "Do I need NgRx Store?" is
 * **Available**: state that needs to be available when re-entering routes.
 * **Retrieved**: state that must be retrieved with a side-effect.
 * **Impacted**: state that is impacted by actions from other sources.
+
+### Redux Devtools
+You can:
+* Timetravel across the application actions
+* Record and reproduce a series of actions and state changes (could be done in production with the appropriate infrastructure)
+* Dispatch your own actions with the Action Dispatcher
+* See a reproduction of our store state in the `indexDB` database through the package `ngrx/db`
