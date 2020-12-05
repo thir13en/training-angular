@@ -13,10 +13,7 @@ export class ResizeObserverService extends Observable<ReadonlyArray<ResizeObserv
     @Inject(ElementRef) { nativeElement }: ElementRef<Element>,
     @Inject(NgZone) ngZone: NgZone,
     @Inject(RESIZE_OBSERVER_SUPPORT) support: boolean,
-    // @Inject(RESIZE_OPTION_BOX) box: ResizeObserverOptions['box'],
   ) {
-    // TODO: temp fix
-    const box = undefined;
     let observer: ResizeObserver;
 
     super(subscriber => {
@@ -29,7 +26,7 @@ export class ResizeObserverService extends Observable<ReadonlyArray<ResizeObserv
           subscriber.next(entries);
         });
       });
-      observer.observe(nativeElement, { box });
+      observer.observe(nativeElement);
     });
 
     return this.pipe(

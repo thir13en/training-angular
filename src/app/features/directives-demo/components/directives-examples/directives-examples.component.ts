@@ -15,8 +15,6 @@ export class DirectivesExamplesComponent implements AfterViewInit {
   @ViewChild(DirectivesDummyComponent, {read: HighlightDirective})
   highlightDirective2!: HighlightDirective;
 
-  constructor() { }
-
   ngAfterViewInit(): void {
     console.log(this.highlightDirective);
     console.log(this.highlightDirective2);
