@@ -1,20 +1,23 @@
-import { ResizeObserverDirective } from './resize-observer-directive';
 import { TestBed } from '@angular/core/testing';
+
 import { ResizeObserverService } from '../services';
+import { ResizeObserverDirective } from './resize-observer-directive';
 
 describe('ResizeObserverDirectiveDirective', () => {
-  it('should create an instance', () => {
-    let directive: ResizeObserverDirective;
-    let resizeObserverService: ResizeObserverService;
+  let directive: ResizeObserverDirective;
 
+  beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [ResizeObserverDirective],
       providers: [ResizeObserverService],
     });
+  });
 
-    resizeObserverService = TestBed.inject(ResizeObserverService);
-    // TODO: figure this out
-    directive = new ResizeObserverDirective(resizeObserverService);
+  beforeEach(() => {
+    directive = TestBed.inject(ResizeObserverDirective);
+  });
+
+  it('should create an instance', () => {
     expect(directive).toBeTruthy();
   });
 });
