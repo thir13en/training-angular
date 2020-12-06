@@ -2,12 +2,14 @@ import { TestBed } from '@angular/core/testing';
 
 import { ResizeObserverService } from '../services';
 import { ResizeObserverDirective } from './resize-observer-directive';
+import { TestingModule } from '../../testing/testing.module';
 
-describe('ResizeObserverDirectiveDirective', () => {
+describe('ResizeObserverDirective', () => {
   let directive: ResizeObserverDirective;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [TestingModule],
       declarations: [ResizeObserverDirective],
       providers: [ResizeObserverService],
     });

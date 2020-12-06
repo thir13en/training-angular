@@ -1,15 +1,41 @@
-// This is a "Solution Style" tsconfig.json file, and is used by editors and TypeScript’s language universal to improve development experience.
-// It is not intended to be used to perform a compilation.
 {
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.spec.json"
-    },
-    {
-      "path": "./e2e/tsconfig.json"
+  "compilerOptions": {
+    "lib": [
+      "es2020",
+      "dom"
+    ],
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "module": "es2020",
+    "target": "es2016",
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "paths": {
+      "@assets/*": ["src/assets/*"],
+      "@environments/*": ["src/environments/*"],
+      "@img/*": ["src/assets/img/*"],
+      "@core/*": ["src/app/core/*"],
+      "@features/*": ["src/app/features/*"],
+      "@layout/*": ["src/app/layout/*"],
+      "@network/*": ["src/app/network/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@store/*": ["src/app/store/*"],
+      "@testing/*": ["src/app/testing/*"]
     }
-]
+  },
+  "compileOnSave": false,
+  "angularCompilerOptions": {
+    "strictInjectionParameters": true,
+    "strictTemplates": true
+  }
 }
