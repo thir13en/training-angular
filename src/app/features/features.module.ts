@@ -11,6 +11,7 @@ import {
   DirectivesDummyComponent,
   StrucDirectivesExampleComponent,
 } from './directives-demo/components';
+import { RxjsDemoComponent } from './rxjs-demo/rxjs-demo.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import {
     DirectivesDummyComponent,
     StrucDirectivesExampleComponent,
     TemplateDrivenFormPasswordValidationComponent,
+    RxjsDemoComponent,
   ],
 })
 export class FeaturesModule {
