@@ -4,7 +4,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable, ObservableInput, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
-import { ErrorCodes, errorHandler } from '../../core/errors';
+import { ERROR_CODES, errorHandler } from '../../core/errors';
 import { NetworkUtils } from '../../network';
 import { NetworkInterfaces } from '../../network/interfaces';
 
@@ -60,7 +60,7 @@ export class ApiService {
   private getFullUrlWithPath(urlFragment: string, pathParams: (string | number)[] = []): string {
     const paramCount: number = (urlFragment.match(/%s/g) || []).length;
 
-    errorHandler(paramCount !== pathParams.length, ErrorCodes.e000);
+    errorHandler(paramCount !== pathParams.length, ERROR_CODES.e000);
 
     return this.addParamsToPath(urlFragment, pathParams);
   }

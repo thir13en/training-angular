@@ -1,1 +1,1 @@
-export { ErrorCodes, errorHandler } from './errors';
+export { ERROR_CODES, errorHandler } from './errors';

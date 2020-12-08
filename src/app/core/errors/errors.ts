@@ -1,4 +1,4 @@
-export const ErrorCodes = {
+export const ERROR_CODES = {
   e000: '000 - The number of parameters in an url does not match the parameters sent',
 };
 

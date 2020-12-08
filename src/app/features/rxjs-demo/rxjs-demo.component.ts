@@ -15,7 +15,6 @@ export class RxjsDemoComponent implements OnInit {
 
   ngOnInit(): void {
     interval(2000).pipe(
-      tap(console.log),
       debug('something'),
     ).subscribe();
   }
