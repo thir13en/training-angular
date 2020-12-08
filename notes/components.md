@@ -14,3 +14,5 @@ With events, it's very easy to fall into the situation of using an event to trig
 ### Smart vs Presentational
 * **Smart** or **Container** do have business logic and know how to retrieve and distribute data.
 * **Presentational**, **pure** or **dummy** components just receive data as an input and paint it on the screen.
+Sometimes, you will need to inject a smart component deep into the component tree, so don't assume that a smart component
+is limited to the main pages of your app.
