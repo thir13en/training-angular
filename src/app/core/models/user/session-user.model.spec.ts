@@ -8,6 +8,7 @@ describe('UserModel', () => {
       id: 1,
       email: 'fake@email.com',
       username: 'hombredeincognito',
+      // eslint-disable-next-line
       first_name: 'hombre',
       surnames: 'deincógnito',
       phone: '+34777777777',
