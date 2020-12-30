@@ -10,7 +10,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
 
 // The Express app is exported so that it can be used by serverless Functions.
-export function app(): express.Express {
+export const app = (): express.Express => {
   const server = express();
   // @ts-ignore
   const distFolder = join(process.cwd(), 'dist/angular-training/dist');
@@ -37,9 +37,9 @@ export function app(): express.Express {
   });
 
   return server;
-}
+};
 
-function run(): void {
+export const run = (): void => {
   // @ts-ignore
   const port = process.env.PORT || 4000;
 
@@ -48,16 +48,15 @@ function run(): void {
   server.listen(port, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
   });
-}
+};
 
 // Webpack will replace 'require' with '__webpack_require__'
 // '__non_webpack_require__' is a proxy to Node 'require'
 // The below code is to ensure that the universal is run only when not requiring the bundle.
-// @ts-ignore
+// eslint-disable-next-line @typescript-eslint/naming-convention,no-underscore-dangle
 declare const __non_webpack_require__: NodeRequire;
 const mainModule = __non_webpack_require__.main;
 const moduleFilename = mainModule && mainModule.filename || '';
-// @ts-ignore
 if (moduleFilename === __filename || moduleFilename.includes('iisnode')) {
   run();
 }
