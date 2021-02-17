@@ -36,3 +36,13 @@ You can:
 * Record and reproduce a series of actions and state changes (could be done in production with the appropriate infrastructure)
 * Dispatch your own actions with the Action Dispatcher
 * See a reproduction of our store state in the `indexDB` database through the package `ngrx/db`
+
+### Implementations
+#### Akita
+* Build on top of `RxJS`
+* Focus on simplicity
+* Object-Oriented focus
+
+##### Building blocks
+* Model: The general representation of the data model which the store is going to manage.
+* Store: a warehouse, where the data model is going to be stored. You can execute all the `DML (Data Manipulation Language)` with the help of Akita built-in store’s methods like `add()`, `update()`, `delete()`, `setActive()`, `setError()`, etc.
