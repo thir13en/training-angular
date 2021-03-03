@@ -21,6 +21,8 @@
 1. [Pitfalls](pitfalls.md)
 1. [Profiling](profiling.md)
 1. [Redux](redux.md)
+1. [Rendering](rendering.md)
+1. [Resources](resources.md)
 1. [Router](router.md)
 1. [RxJs](rxjs.md)
 1. [Styling](styling.md)

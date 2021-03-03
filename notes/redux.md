@@ -46,3 +46,6 @@ You can:
 ##### Building blocks
 * Model: The general representation of the data model which the store is going to manage.
 * Store: a warehouse, where the data model is going to be stored. You can execute all the `DML (Data Manipulation Language)` with the help of Akita built-in store’s methods like `add()`, `update()`, `delete()`, `setActive()`, `setError()`, etc.
+* Query: You can run all the DDL (Data Definition Language) with the help of Akita built-in query’s methods like `select()`, `selectAll()`, `selectEntity()`, `selectCount()`, `selectActive()`, etc.
+
+##### Two types of store
