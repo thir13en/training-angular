@@ -13,6 +13,7 @@
 1. [Errors](errors.md)
 1. [General](general.md)
 1. [i18n](i18n.md)
+1. [Ivy](Ivy.md)
 1. [Lazy Loading](lazy-loading.md)
 1. [Material](material.md)
 1. [Modules](modules.md)
