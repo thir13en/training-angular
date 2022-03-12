@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { ROUTES_LIST } from '@core/routes';\nexport const sidenavItems = [{\n  code: 1,\n  text: 'TEMPLATE DRIVEN FORMS',\n  link: ROUTES_LIST.TEMPLATE_DRIVEN_FORMS,\n  icon: 'text_format'\n}, {\n  code: 1,\n  text: 'DIRECTIVES',\n  link: ROUTES_LIST.DIRECTIVES,\n  icon: 'build'\n}];","map":null,"metadata":{},"sourceType":"module"}
