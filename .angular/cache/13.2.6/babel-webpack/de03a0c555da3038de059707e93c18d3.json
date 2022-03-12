@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { DirectivesDummyComponent } from './directives-dummy/directives-dummy.component';\nexport { DirectivesExamplesComponent } from './directives-examples/directives-examples.component';\nexport { StrucDirectivesExampleComponent } from './struc-directives-example/struc-directives-example.component';","map":null,"metadata":{},"sourceType":"module"}
