@@ -8,8 +8,7 @@
   },
   "files": [
     "src/test.ts",
-    "src/polyfills.ts",
-    "node_modules/@types/resize-observer-browser/index.d.ts"
+    "src/polyfills.ts"
   ],
   "include": [
     "src/**/*.spec.ts",
