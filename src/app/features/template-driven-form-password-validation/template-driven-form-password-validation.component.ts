@@ -42,7 +42,7 @@ import { NgForm, NgModel } from '@angular/forms';
         >
         <!-- Another way to validate with specific errors -->
         <p
-          *ngIf="email.errors?.required && email.touched"
+          *ngIf="email.errors?.['required'] && email.touched"
           class="error-message c-warn"
         >This field is mandatory</p>
       </div>
