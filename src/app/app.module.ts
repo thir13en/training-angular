@@ -16,8 +16,6 @@ import { ToggleHamburgerComponent } from '@layout/components/toggle-hamburguer/t
 
 @NgModule({
   imports: [
-    // BrowserModule already includes CommonModule
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     AppCoreModule,
     MatToolbarModule,

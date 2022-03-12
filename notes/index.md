@@ -22,10 +22,7 @@
 1. [Pitfalls](pitfalls.md)
 1. [Profiling](profiling.md)
 1. [Redux](redux.md)
-<<<<<<< HEAD
-=======
 1. [Talented Dudes](relevant-folks.md)
->>>>>>> devel
 1. [Rendering](rendering.md)
 1. [Resources](resources.md)
 1. [Router](router.md)

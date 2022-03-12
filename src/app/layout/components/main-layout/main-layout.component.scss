@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows: $navbar-height $toolbar-height auto $footer-height;
+  overflow-y: hidden;
 
   #navbar {
     height: $navbar-height;
