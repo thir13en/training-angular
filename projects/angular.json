@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "adminloopz": "apps/adminloopz",
+    "adminloopz-e2e": "apps/adminloopz-e2e"
+  }
+}

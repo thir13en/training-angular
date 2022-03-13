@@ -1,0 +1,28 @@
+{
+  "root": "apps/adminloopz-e2e",
+  "sourceRoot": "apps/adminloopz-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/adminloopz-e2e/cypress.json",
+        "devServerTarget": "adminloopz:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "adminloopz:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/adminloopz-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["adminloopz"]
+}
