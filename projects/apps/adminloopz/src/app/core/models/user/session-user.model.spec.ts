@@ -1,4 +1,4 @@
-import { SessionUserModel } from '@core/models/user/session-user.model';
+import { SessionUserModel } from './session-user.model';
 
 describe('UserModel', () => {
   let user: SessionUserModel;
@@ -8,9 +8,8 @@ describe('UserModel', () => {
       id: 1,
       email: 'fake@email.com',
       username: 'hombredeincognito',
-      // eslint-disable-next-line
-      first_name: 'hombre',
-      surnames: 'deincógnito',
+      firstName: 'hombre',
+      lastName: 'deincógnito',
       phone: '+34777777777',
       photoUrl: 'assets/img/user/empty.svg'
     });

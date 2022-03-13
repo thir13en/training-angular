@@ -1,4 +1,14 @@
-export class SessionUserModel {
+interface SessionUser {
+  readonly id: number;
+  readonly email: string;
+  readonly username: string;
+  readonly firstName: string;
+  readonly lastName: string;
+  readonly phone: string;
+  readonly photoUrl: string;
+}
+
+export class SessionUserModel implements SessionUser {
   readonly id: number;
   readonly email: string;
   readonly username: string;
@@ -7,7 +17,7 @@ export class SessionUserModel {
   readonly phone: string;
   readonly photoUrl: string;
 
-  constructor(userRes: any) {
+  constructor(userRes: SessionUser) {
     this.id = userRes.id;
     this.email = userRes.email;
     this.username = userRes.username;

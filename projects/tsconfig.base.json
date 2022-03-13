@@ -14,7 +14,18 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@assets/*": ["src/assets/*"],
+      "@environments/*": ["src/environments/*"],
+      "@img/*": ["src/assets/img/*"],
+      "@core/*": ["apps/adminloopz/src/app/core/*"],
+      "@features/*": ["src/app/features/*"],
+      "@layout/*": ["apps/adminloopz/src/app/layout/*"],
+      "@network/*": ["src/app/network/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@store/*": ["src/app/store/*"],
+      "@testing/*": ["src/app/testing/*"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

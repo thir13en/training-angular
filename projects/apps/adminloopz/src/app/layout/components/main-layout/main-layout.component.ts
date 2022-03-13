@@ -2,9 +2,9 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
-import { MenuItem } from '@layout/interfaces/menu-item';
-import { sidenavItems } from '@layout/components/main-layout/sidenav-items';
-import { UIStateService } from '@store/ui-state.service';
+import { MenuItem } from '../../interfaces/menu-item';
+import { sidenavItems } from './sidenav-items';
+// import { UIStateService } from '@store/ui-state.service';
 
 
 @Component({
@@ -16,10 +16,10 @@ export class MainLayoutComponent implements OnInit {
   sidenavOpened$!: Observable<boolean>;
   menuItems: MenuItem[] = sidenavItems;
 
-  constructor(private uiService: UIStateService) {}
+  // constructor(private uiService: UIStateService) {}
 
   ngOnInit(): void {
-    this.sidenavOpened$ = this.uiService.sidenavOpened$;
+    // this.sidenavOpened$ = this.uiService.sidenavOpened$;
   }
 
 }

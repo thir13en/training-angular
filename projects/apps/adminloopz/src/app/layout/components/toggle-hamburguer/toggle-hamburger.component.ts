@@ -6,7 +6,7 @@ import { UIStateService } from '@store/ui-state.service';
 
 
 @Component({
-  selector: 'app-toggle-hamburger',
+  selector: 'projects-toggle-hamburger',
   templateUrl: './toggle-hamburger.component.html',
   styleUrls: ['./toggle-hamburger.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -8,9 +8,6 @@ const getLocation = (): Location | null => window?.location || null;
 const getNavigator = (): Navigator | null => window?.navigator || null;
 const getGeolocation = (): Geolocation | null => window?.navigator?.geolocation || null;
 const getFileReader = (): FileReader | null => FileReader ? new FileReader() : null;
-// @ts-ignore
-// TODO: wait for support
-const getResizeObserver = (): ResizeObserver | null => ResizeObserver ? new ResizeObserver() : null;
 
 /*****************************************************************************************************
  * INJECTION TOKENS **********************************************************************************
@@ -68,15 +65,6 @@ export const POSITION_OPTIONS = new InjectionToken<PositionOptions>(
   { factory: () => ({}) },
 );
 
-// @ts-ignore
-export const RESIZE_OBSERVER = new InjectionToken<ResizeObserver | null>(
-  'An abstraction over ResizeObserver navigator',
-  {
-    providedIn: 'root',
-    factory: getResizeObserver,
-  },
-);
-
 /*****************************************************************************************************
  * SUPPORT *******************************************************************************************
  ****************************************************************************************************/
@@ -84,12 +72,5 @@ export const GEOLOCATION_SUPPORT = new InjectionToken<boolean>(
   'Is Geolocation API supported?',
   {
     factory: () => !!inject(GEOLOCATION),
-  },
-);
-
-export const RESIZE_OBSERVER_SUPPORT = new InjectionToken<boolean>(
-  'Is ResizeObserver API supported?',
-  {
-    factory: () => !!inject(RESIZE_OBSERVER),
   },
 );
