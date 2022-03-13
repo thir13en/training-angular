@@ -11,6 +11,11 @@
     </div>
   </section>
 
+  <section>
+    <button type="button" (click)="toggleSidenav()">Change store state</button>
+    <h3>{{ sidenavOpened$ | async }}</h3>
+  </section>
+
   <!-- toolbar -->
   <!--<mat-toolbar class="bg-dark pr-md2 pl-md2">
     <app-toggle-hamburger></app-toggle-hamburger>
