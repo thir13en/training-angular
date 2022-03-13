@@ -16,10 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@assets/*": ["src/assets/*"],
-      "@environments/*": ["src/environments/*"],
-      "@img/*": ["src/assets/img/*"],
       "@core/*": ["apps/adminloopz/src/app/core/*"],
+      "@environments/*": ["src/environments/*"],
       "@features/*": ["src/app/features/*"],
+      "@img/*": ["src/assets/img/*"],
       "@layout/*": ["apps/adminloopz/src/app/layout/*"],
       "@network/*": ["src/app/network/*"],
       "@shared/*": ["src/app/shared/*"],
