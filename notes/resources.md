@@ -7,3 +7,4 @@
 
 ### Architecture
 1. [Decoupled Components with Strategy Pattern](https://medium.com/angular-in-depth/level-up-your-components-api-using-the-strategy-pattern-61762583a7d8)
+1. [How the Angular Compiler works](https://blog.angular.io/how-the-angular-compiler-works-42111f9d2549)
