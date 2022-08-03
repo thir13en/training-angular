@@ -3,6 +3,7 @@
 1. [Angular Elements](angular-elements.md)
 1. [Angular Material](angular-material.md)
 1. [Bootstrapping](bootstrapping.md)
+1. [Binding](binding.md)
 1. [Change Detection](change-detection.md)
 1. [Components](components.md)
 1. [Content Projection](content-projection.md)
