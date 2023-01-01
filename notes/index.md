@@ -18,6 +18,7 @@
 1. [Lazy Loading](lazy-loading.md)
 1. [Material](material.md)
 1. [Modules](modules.md)
+1. [Nx](nx.md)
 1. [Forms](forms/index.md)
 1. [Pipes](pipes.md)
 1. [Pitfalls](pitfalls.md)
